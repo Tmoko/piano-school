@@ -1,0 +1,310 @@
+@charset "utf-8";
+//common style
+
+@import "compass";
+
+html{
+    font-size: 62.5%;
+}
+
+@mixin fontsize($size: 24, $base: 10) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+
+$ja_g : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+$ja_m : "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+$pink : #ffcac9;
+$yellow : #e6dea9;
+$green : #14c0c9;
+$font : #b2804c;
+
+body{
+        background: #e3f4f1;
+}
+
+header{
+    background: #fff;
+    padding: 2%;
+}
+
+h1,h2,h3{
+    @include fontsize(24);
+}
+
+h1,h2,h3,ul,li,p,a,img{
+    margin: 0;
+    padding: 0;
+    color: #626262;
+}
+
+a{
+    text-decoration: none;
+    color: #626262;
+}
+
+ul{
+    list-style: none;
+}
+@mixin clearfix{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@mixin fontset{
+    font-family: "Hannari", $ja_m ;
+    letter-spacing: 0.2rem;
+}
+
+/* SP用 
+------------------------------------------------*/
+//header
+header{
+    .sp_h{
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            width:223px;
+            height: 40px;
+            
+
+        }
+        .sp_h_right{
+            width:80px;
+        
+            display: flex;
+            align-items: flex-end;
+            .lesson{
+                box-sizing: border-box;
+                    img{
+                        width: 58px;
+                        height: 37px;
+                        vertical-align: bottom;
+                    }
+            }
+            .bar{
+                font-size: 3rem;
+                color: $yellow;
+            }
+            a{
+                display: inline-block;
+            }
+        }      
+        
+    }
+    
+    .pc_h,.sp_nav,#pc_nav{
+        display: none;
+    }
+
+}//header,nav
+
+
+.main_wrap{
+    
+
+main{
+    background: url('img/common/bg_score.png') repeat-y;
+    background-size:cover;
+    max-width: 100%;
+
+//main_v
+    .main_v{
+        .main_img_sp{
+            position: absolute;
+            top: 0;
+        }
+        .main_catch_pc{
+            display: none;
+        }
+        .main_photo{
+            padding-top: 15px;
+        }
+    }//main_v
+    
+    .main_catch_sp{
+        h2{
+            @include fontsize(18);
+            color: $font;
+            line-height: 1.6;
+            font-family: "Hannari", $ja_m ;
+            letter-spacing: 0.2rem;
+            font-weight: bold;
+        }
+        p{
+            @include fontsize(16);
+            color: $font;
+            font-family: "Hannari", $ja_m ;
+            letter-spacing: 0.1rem;
+            
+        }
+    }
+    
+//int_sec
+.int_sec{
+    
+    .int{
+        display: flex;
+        align-items: center;
+        padding: 2% 2% 6% 2%;
+        position: relative;
+        
+
+        img{
+            max-width: 50%;
+            border-radius: 90%;
+            border:solid 10px #fff;
+            box-sizing: border-box;
+            &::nth-child(odd){
+                position: absolute;
+                right:0;
+            }
+            
+            
+            
+        }
+        .flex{
+            box-sizing: border-box;
+            padding-left: 5%;
+            
+            h3{
+                @include fontsize(20);
+                font-weight: bold;
+                @include fontset;
+                padding-bottom: 5%;
+            }
+            p{
+                @include fontsize(14);
+                letter-spacing: -0.03rem;
+                font-family: $ja_g;
+            }
+        }
+        
+        
+    }
+    
+}
+    
+}
+}
+/* PC用(900px以上)
+------------------------------------------------*/
+@media(min-width: 900px){
+    
+//header
+    header{
+        padding-top: 50px;
+        .sp_h{
+            display: none;
+            
+        }
+        .pc_h{
+            display: block;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            vertical-align: bottom;
+            z-index:0;
+            .logo{
+                width: 250px;
+                height: auto;
+                
+            }
+            .pc_h_right{
+                width: 490px;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                z-index: 1;
+               
+                .lesson{
+                    vertical-align: bottom;
+                    a{
+                        display: block;
+                    
+                    
+                    img{
+                        display: block;
+                        width: 180px;
+                        height: auto;
+                        vertical-align: bottom;
+                        
+                     }
+                    }
+                    
+                    
+                }
+                .contact{
+                    position: reletive;
+                    z-index: 2;
+ 
+                }
+                
+                .bg{
+                    background: url(../img/pc/contact_frame.png) no-repeat;
+                    background-size: 75%;
+                    width: 324px;
+                    height: 123px;
+                    position: absolute;
+                    top: -35px;
+                    right:-80px;
+                   
+                    z-index: 0;
+                    }   
+                                  
+                    
+            }//pc_h_right
+            
+        }//.pc_h
+    }//pc header
+    
+    
+    nav{
+        padding-top: 50px;
+        ul{
+            text-align: center;
+            display:flex;
+            flex-basis: 189px;
+            li{
+                padding:20px 30px;
+                background: #eee;
+                border-left: solid 1px #b2804c;
+                &::after-child{
+                    border-right: solid 1px #b2804c;
+                }
+            
+            }
+        }
+    }//nav
+    
+    
+  main{
+    .main_v{
+        .main_catch_sp{
+            
+        }
+        .main_catch_pc{
+            display: block;
+            position: absolute;
+            top: 0;
+            
+        }        
+        
+    }
+    .int_sec{
+        display: block;
+   
+    .int{
+        h3{
+            @include fontsize(20);
+        }
+        img{
+            width:100%;
+        }
+    }
+    
+    }//int_sec
+  }//main
+}

@@ -1,0 +1,178 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #e3f4f1; }
+
+header {
+  background: #fff;
+  padding: 2%; }
+
+h1, h2, h3 {
+  font-size: 24px;
+  font-size: 2.4rem; }
+
+h1, h2, h3, ul, li, p, a, img {
+  margin: 0;
+  padding: 0;
+  color: #626262; }
+
+a {
+  text-decoration: none;
+  color: #626262; }
+
+ul {
+  list-style: none; }
+
+/* SP用 
+------------------------------------------------*/
+header .sp_h {
+  display: flex;
+  justify-content: space-between; }
+  header .sp_h .logo {
+    width: 223px;
+    height: 40px; }
+  header .sp_h .sp_h_right {
+    width: 80px;
+    display: flex;
+    align-items: flex-end; }
+    header .sp_h .sp_h_right .lesson {
+      box-sizing: border-box; }
+      header .sp_h .sp_h_right .lesson img {
+        width: 58px;
+        height: 37px;
+        vertical-align: bottom; }
+    header .sp_h .sp_h_right .bar {
+      font-size: 3rem;
+      color: #e6dea9; }
+    header .sp_h .sp_h_right a {
+      display: inline-block; }
+header .pc_h, header .sp_nav, header #pc_nav {
+  display: none; }
+
+.main_wrap main {
+  background: url("img/common/bg_score.png") repeat-y;
+  background-size: cover;
+  max-width: 100%; }
+  .main_wrap main .main_v .main_img_sp {
+    position: absolute;
+    top: 0; }
+  .main_wrap main .main_v .main_catch_pc {
+    display: none; }
+  .main_wrap main .main_v .main_photo {
+    padding-top: 15px; }
+  .main_wrap main .main_catch_sp h2 {
+    font-size: 18px;
+    font-size: 1.8rem;
+    color: #b2804c;
+    line-height: 1.6;
+    font-family: "Hannari", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    letter-spacing: 0.2rem;
+    font-weight: bold; }
+  .main_wrap main .main_catch_sp p {
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #b2804c;
+    font-family: "Hannari", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    letter-spacing: 0.1rem; }
+  .main_wrap main .int_sec .int {
+    display: flex;
+    align-items: center;
+    padding: 2% 2% 6% 2%;
+    position: relative; }
+    .main_wrap main .int_sec .int img {
+      max-width: 50%;
+      border-radius: 90%;
+      border: solid 10px #fff;
+      box-sizing: border-box; }
+      .main_wrap main .int_sec .int img::nth-child(odd) {
+        position: absolute;
+        right: 0; }
+    .main_wrap main .int_sec .int .flex {
+      box-sizing: border-box;
+      padding-left: 5%; }
+      .main_wrap main .int_sec .int .flex h3 {
+        font-size: 20px;
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: "Hannari", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+        letter-spacing: 0.2rem;
+        padding-bottom: 5%; }
+      .main_wrap main .int_sec .int .flex p {
+        font-size: 14px;
+        font-size: 1.4rem;
+        letter-spacing: -0.03rem;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif; }
+
+/* PC用(900px以上)
+------------------------------------------------*/
+@media (min-width: 900px) {
+  header {
+    padding-top: 50px; }
+    header .sp_h {
+      display: none; }
+    header .pc_h {
+      display: block;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      vertical-align: bottom;
+      z-index: 0; }
+      header .pc_h .logo {
+        width: 250px;
+        height: auto; }
+      header .pc_h .pc_h_right {
+        width: 490px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1; }
+        header .pc_h .pc_h_right .lesson {
+          vertical-align: bottom; }
+          header .pc_h .pc_h_right .lesson a {
+            display: block; }
+            header .pc_h .pc_h_right .lesson a img {
+              display: block;
+              width: 180px;
+              height: auto;
+              vertical-align: bottom; }
+        header .pc_h .pc_h_right .contact {
+          position: reletive;
+          z-index: 2; }
+        header .pc_h .pc_h_right .bg {
+          background: url(../img/pc/contact_frame.png) no-repeat;
+          background-size: 75%;
+          width: 324px;
+          height: 123px;
+          position: absolute;
+          top: -35px;
+          right: -80px;
+          z-index: 0; }
+
+  nav {
+    padding-top: 50px; }
+    nav ul {
+      text-align: center;
+      display: flex;
+      flex-basis: 189px; }
+      nav ul li {
+        padding: 20px 30px;
+        background: #eee;
+        border-left: solid 1px #b2804c; }
+        nav ul li::after-child {
+          border-right: solid 1px #b2804c; }
+
+  main .main_v .main_catch_pc {
+    display: block;
+    position: absolute;
+    top: 0; }
+  main .int_sec {
+    display: block; }
+    main .int_sec .int h3 {
+      font-size: 20px;
+      font-size: 2rem; }
+    main .int_sec .int img {
+      width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */
