@@ -27,13 +27,14 @@ body{
 header{
     background: #fff;
     padding: 2%;
+    box-shadow: 0px 6px 3px -3px rgba(215,232,229,0.6);;
 }
 
 h1,h2,h3{
     @include fontsize(24);
 }
 
-h1,h2,h3,ul,li,p,a,img{
+h1,h2,h3,ul,li,p,a,img,dl,dt,dd{
     margin: 0;
     padding: 0;
     color: #626262;
@@ -95,7 +96,7 @@ header{
         
     }
     
-    .pc_h,.sp_nav,#pc_nav{
+    .pc_h,.sp_nav,.pc_nav{
         display: none;
     }
 
@@ -116,9 +117,7 @@ main{
             position: absolute;
             top: 0;
         }
-        .main_catch_pc{
-            display: none;
-        }
+
         .main_photo{
             padding-top: 15px;
         }
@@ -143,13 +142,170 @@ main{
     }
     
 //int_sec
-.int_sec{
+
+//ご挨拶
+    .greeting{
+        padding-top: 20px;
+        position: relative;
+        &:before{
+            content: url('img/common/greeting_img.png') no-repeat;
+            width:148px;
+            height:153px;
+            display: block;
+           
+        }
+        h3{
+            @include fontsize(20);
+            padding-bottom: 2%;
+            
+            i{
+                padding-right: 2%;
+            }
+        }
+        .greet{
+            border-radius: 5px;
+            background: #fff;
+            padding: 5%;
+            
+            
+            }
+
+    }//greeting
+    
+//お知らせ  
+    .info{
+        padding: 20px 0;
+        h3{
+            @include fontsize(20);
+            padding-bottom: 2%;
+            i{
+                padding-right: 2%;
+            }
+        }
+        
+        .wrap{
+            position: relative;
+            padding: 5%;
+            border-radius: 5px;
+            background: #fff;
+            .info_bg{
+            
+
+        }
+            .more{
+                position: absolute;
+                top: 90px;
+                right: 5px;
+                @include fontsize(14);
+                margin-left: 68%;
+                border: solid 1px $yellow;
+                border-radius: 5% 5% 5%;
+                padding:3px 20px;
+                color: $yellow;
+                &:hover{
+                    color: #fff;
+                    background: $yellow;
+                    transition: 0.8s ease;
+                }
+            }
+        }
+
+        
+        
+        
+    }
+//アクセス
+    .access{
+        @extend .info;
+    }
+
+//バナー
+    .recital{
+        display: flex;
+        background: $pink;
+        margin-bottom: 10px;
+        .left{
+            padding: 3% 2% 3% 3%;
+            width: 49%;
+            text-align: right;
+            h4{
+                @include fontsize(16);
+                font-weight: lighter;
+                text-shadow: 1px 1px 0 #fff,
+                             1px -1px 0 #fff,
+                             -1px 1px 0 #fff,
+                             -1px -1px 0 #fff;
+                
+                padding-bottom: 2%;
+            }
+            p{
+                @include fontsize(12);
+                
+            }
+        }
+        .trim{
+            width: 54.5%;
+            height: 50%;
+            overflow: hidden;
+
+        }
+
+        }//recital
+    
+    .concert{
+        @extend .recital;
+            flex-direction: row-reverse;
+            background: $yellow;
+            .left{
+                text-align: left;
+            }
+    }
+    .blog{
+        @extend .recital;
+        
+    }
+
+//topへ戻る
+    .back{
+        display: inline-block;
+        background: #fff;
+        padding:10px;
+    }
+    
+   
+    
+}//main
+}//main_wrap
+
+footer{
+    padding: 20px 20px;
+    background: #fff;
+    text-align: center;
+    .sitemap{
+        @include fontsize(10);
+        display: flex;
+        justify-content: space-around;
+        line-height: 2.5;
+    }
+}
+
+/*SP用（899px以下）*/
+@media(max-width: 899px){
+
+main{
+    .main_v{
+        .main_catch_pc{
+            display: none;
+        }
+    }
+    .int_sec{
     
     .int{
         display: flex;
         align-items: center;
         padding: 2% 2% 6% 2%;
         position: relative;
+       
         
 
         img{
@@ -183,12 +339,13 @@ main{
         }
         
         
+         }
+    
+        }
+    
     }
-    
 }
-    
-}
-}
+
 /* PC用(900px以上)
 ------------------------------------------------*/
 @media(min-width: 900px){
@@ -282,9 +439,6 @@ main{
     
   main{
     .main_v{
-        .main_catch_sp{
-            
-        }
         .main_catch_pc{
             display: block;
             position: absolute;
@@ -293,18 +447,39 @@ main{
         }        
         
     }
+    .main_catch_sp{
+            display: none;
+            
+        }
     .int_sec{
-        display: block;
+        padding-top:30px;
+        display: flex;
+        text-align: center;
    
     .int{
+        width: 250px;
         h3{
-            @include fontsize(20);
+            @include fontsize(24);
+            letter-spacing: 0;
+            font-family: "Hannari";
+            padding-top: 20px;
         }
         img{
-            width:100%;
+            max-width:70%;
+            border: solid 10px #fff;
+            border-radius: 90%;
         }
-    }
+        .flex{
+            .indent{
+                padding-top:30px;
+            }
+
+            }
+        }
+    
     
     }//int_sec
+    
+
   }//main
-}
+}//main_wrap

@@ -7,13 +7,14 @@ body {
 
 header {
   background: #fff;
-  padding: 2%; }
+  padding: 2%;
+  box-shadow: 0px 6px 3px -3px rgba(215, 232, 229, 0.6); }
 
 h1, h2, h3 {
   font-size: 24px;
   font-size: 2.4rem; }
 
-h1, h2, h3, ul, li, p, a, img {
+h1, h2, h3, ul, li, p, a, img, dl, dt, dd {
   margin: 0;
   padding: 0;
   color: #626262; }
@@ -48,7 +49,7 @@ header .sp_h {
       color: #e6dea9; }
     header .sp_h .sp_h_right a {
       display: inline-block; }
-header .pc_h, header .sp_nav, header #pc_nav {
+header .pc_h, header .sp_nav, header .pc_nav {
   display: none; }
 
 .main_wrap main {
@@ -58,8 +59,6 @@ header .pc_h, header .sp_nav, header #pc_nav {
   .main_wrap main .main_v .main_img_sp {
     position: absolute;
     top: 0; }
-  .main_wrap main .main_v .main_catch_pc {
-    display: none; }
   .main_wrap main .main_v .main_photo {
     padding-top: 15px; }
   .main_wrap main .main_catch_sp h2 {
@@ -76,35 +75,126 @@ header .pc_h, header .sp_nav, header #pc_nav {
     color: #b2804c;
     font-family: "Hannari", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
     letter-spacing: 0.1rem; }
-  .main_wrap main .int_sec .int {
+  .main_wrap main .greeting {
+    padding-top: 20px;
+    position: relative; }
+    .main_wrap main .greeting:before {
+      content: url("img/common/greeting_img.png") no-repeat;
+      width: 148px;
+      height: 153px;
+      display: block; }
+    .main_wrap main .greeting h3 {
+      font-size: 20px;
+      font-size: 2rem;
+      padding-bottom: 2%; }
+      .main_wrap main .greeting h3 i {
+        padding-right: 2%; }
+    .main_wrap main .greeting .greet {
+      border-radius: 5px;
+      background: #fff;
+      padding: 5%; }
+  .main_wrap main .info, .main_wrap main .access {
+    padding: 20px 0; }
+    .main_wrap main .info h3, .main_wrap main .access h3 {
+      font-size: 20px;
+      font-size: 2rem;
+      padding-bottom: 2%; }
+      .main_wrap main .info h3 i, .main_wrap main .access h3 i {
+        padding-right: 2%; }
+    .main_wrap main .info .wrap, .main_wrap main .access .wrap {
+      position: relative;
+      padding: 5%;
+      border-radius: 5px;
+      background: #fff; }
+      .main_wrap main .info .wrap .more, .main_wrap main .access .wrap .more {
+        position: absolute;
+        top: 90px;
+        right: 5px;
+        font-size: 14px;
+        font-size: 1.4rem;
+        margin-left: 68%;
+        border: solid 1px #e6dea9;
+        border-radius: 5% 5% 5%;
+        padding: 3px 20px;
+        color: #e6dea9; }
+        .main_wrap main .info .wrap .more:hover, .main_wrap main .access .wrap .more:hover {
+          color: #fff;
+          background: #e6dea9;
+          transition: 0.8s ease; }
+  .main_wrap main .recital, .main_wrap main .concert, .main_wrap main .blog {
+    display: flex;
+    background: #ffcac9;
+    margin-bottom: 10px; }
+    .main_wrap main .recital .left, .main_wrap main .concert .left, .main_wrap main .blog .left {
+      padding: 3% 2% 3% 3%;
+      width: 49%;
+      text-align: right; }
+      .main_wrap main .recital .left h4, .main_wrap main .concert .left h4, .main_wrap main .blog .left h4 {
+        font-size: 16px;
+        font-size: 1.6rem;
+        font-weight: lighter;
+        text-shadow: 1px 1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, -1px -1px 0 #fff;
+        padding-bottom: 2%; }
+      .main_wrap main .recital .left p, .main_wrap main .concert .left p, .main_wrap main .blog .left p {
+        font-size: 12px;
+        font-size: 1.2rem; }
+    .main_wrap main .recital .trim, .main_wrap main .concert .trim, .main_wrap main .blog .trim {
+      width: 54.5%;
+      height: 50%;
+      overflow: hidden; }
+  .main_wrap main .concert {
+    flex-direction: row-reverse;
+    background: #e6dea9; }
+    .main_wrap main .concert .left {
+      text-align: left; }
+  .main_wrap main .back {
+    display: inline-block;
+    background: #fff;
+    padding: 10px; }
+
+footer {
+  padding: 20px 20px;
+  background: #fff;
+  text-align: center; }
+  footer .sitemap {
+    font-size: 10px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-around;
+    line-height: 2.5; }
+
+/*SP用（899px以下）*/
+@media (max-width: 899px) {
+  main .main_v .main_catch_pc {
+    display: none; }
+  main .int_sec .int {
     display: flex;
     align-items: center;
     padding: 2% 2% 6% 2%;
     position: relative; }
-    .main_wrap main .int_sec .int img {
+    main .int_sec .int img {
       max-width: 50%;
       border-radius: 90%;
       border: solid 10px #fff;
       box-sizing: border-box; }
-      .main_wrap main .int_sec .int img::nth-child(odd) {
+      main .int_sec .int img::nth-child(odd) {
         position: absolute;
         right: 0; }
-    .main_wrap main .int_sec .int .flex {
+    main .int_sec .int .flex {
       box-sizing: border-box;
       padding-left: 5%; }
-      .main_wrap main .int_sec .int .flex h3 {
+      main .int_sec .int .flex h3 {
         font-size: 20px;
         font-size: 2rem;
         font-weight: bold;
         font-family: "Hannari", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
         letter-spacing: 0.2rem;
         padding-bottom: 5%; }
-      .main_wrap main .int_sec .int .flex p {
+      main .int_sec .int .flex p {
         font-size: 14px;
         font-size: 1.4rem;
         letter-spacing: -0.03rem;
-        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif; }
-
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif; } }
 /* PC用(900px以上)
 ------------------------------------------------*/
 @media (min-width: 900px) {
@@ -167,12 +257,25 @@ header .pc_h, header .sp_nav, header #pc_nav {
     display: block;
     position: absolute;
     top: 0; }
+  main .main_catch_sp {
+    display: none; }
   main .int_sec {
-    display: block; }
-    main .int_sec .int h3 {
-      font-size: 20px;
-      font-size: 2rem; }
-    main .int_sec .int img {
-      width: 100%; } }
+    padding-top: 30px;
+    display: flex;
+    text-align: center; }
+    main .int_sec .int {
+      width: 250px; }
+      main .int_sec .int h3 {
+        font-size: 24px;
+        font-size: 2.4rem;
+        letter-spacing: 0;
+        font-family: "Hannari";
+        padding-top: 20px; }
+      main .int_sec .int img {
+        max-width: 70%;
+        border: solid 10px #fff;
+        border-radius: 90%; }
+      main .int_sec .int .flex .indent {
+        padding-top: 30px; } }
 
 /*# sourceMappingURL=style.css.map */

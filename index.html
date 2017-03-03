@@ -42,7 +42,7 @@
           <img class="u-full-width logo" src="img/sp/sp_logo.png" srcset="img/sp/sp_logo@2x.png" alt="岡山県岡山市にあるピアノ教室　かわさきピアノ音楽教室">
           <div class="sp_h_right">
           <a href="#" class="lesson">
-          <img href="#" src="img/sp/sp_free_lesson.png" alt="無料体験レッスン受付中" srcset="img/sp/sp_free_lesson@2x.png" />
+          <img src="img/sp/sp_free_lesson.png" alt="無料体験レッスン受付中" srcset="img/sp/sp_free_lesson@2x.png" />
           </a>
           <i class="fa fa-bars bar" aria-hidden="true"></i>
           </div>
@@ -73,13 +73,13 @@
           <div class="bg"></div>
           </div>
           </div><!-- pc_h -->
-      </div>
-  </div>
-</div>
+      </div><!-- twelve columns -->
+  </div><!-- row -->
+</div><!-- continer -->
 
 <!-- nav pc
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<nav id="pc_nav">
+<nav class="pc_nav">
   <div class="container">
     <div class="row">
       <div class="twelve columns">
@@ -128,54 +128,175 @@
           <p>初めての方からステップアップしたい方まで</p>
           </div>
         </section>
-        <section class="int">
+        <section class="int reverse">
           <img class="u-full-width" src="img/common/top2.jpg" alt="クラシック"/>
           <div class="flex">
           <h3>クラシック</h3>
-          <p>クラシックを中心に情緒豊かな楽曲を楽しめます</p>
+          <p class="indent">クラシックを中心に情緒豊かな楽曲を楽しめます</p>
           </div>
         </section>
         <section class="int">
           <img class="u-max-full-width" src="img/common/top3.jpg" alt="楽しく学べる"/>
           <div class="flex">
           <h3>楽しく学べる</h3>
-          <p>各個人合わせた指導をさせていただきます</p>
+          <p class="indent">各個人合わせた指導をさせていただきます</p>
           </div>
         </section>
         <section class="int">
           <img class="u-max-full-width" src="img/common/top4.jpg" alt="レッスン場所"/>
           <div class="flex">
           <h3>レッスン場所</h3>
-          <p>共有スペースの一室を借りてレッスンをします</p>
+          <p class="indent">共有スペースの一室を借りてレッスンをします</p>
           </div>
         </section>
       </div><!-- int_sec -->  
-     </div>
+     </div><!-- twelve columns -->
+    </div><!-- row -->
+  </div><!-- container -->
+  
   <div class="container">
     <div class="row">
       <div class="nine columns"> 
       <section class="greeting">
-        <h3>ご挨拶</h3>
-        <div class="">
+        <h3><i class="fa fa-music" aria-hidden="true"></i>ご挨拶</h3>
+        <div class="greet">
           <p>数ある音楽教室の中より、当音楽教室のサイトをご覧いただきまして、誠にありがとうございます。</p>
           <p>当音楽教室は2018年に開講するピアノを中心とした教室で、大人から子供まで幅白い層に対応し、音楽を楽しむことのできる教室です。</p>
         </div>
       </section>
-      </div>
+      <section class="info">
+        <h3><i class="fa fa-music" aria-hidden="true"></i>お知らせ</h3>
+        <div class="wrap">
+        <dl class="info_bg">
+          <dt>2017.03.02</dt>
+          <dd><a href="#">ホームページ開発中</a></dd>
+          <dt>2017.03.02</dt>
+          <dd>ホームページ開発中</dd>
+        </dl>
+        <p class="more">MORE</p>
+        </div>
+      </section>
+<section class="access">
+        <h3><i class="fa fa-music" aria-hidden="true"></i>アクセス</h3>
+        <p>『共有スペース施設名』</p>
+        <p>〒000-0000</p>
+        <p>岡山県岡山市○○○○○○○○○○○○</p>
+        <p>バスで5分　〇〇バス停より徒歩1分</p>
+<div class="gm_area">
+<script src="//maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript">
+function googleMap() {
+var latlng = new google.maps.LatLng(34.667048, 133.920597);/* 座標 */
+var myOptions = {
+zoom: 16, /*拡大比率*/
+center: latlng,
+scrollwheel: false,
+disableDoubleClickZoom: true,
+draggable: false,
+mapTypeControlOptions: { mapTypeIds: ['style', google.maps.MapTypeId.ROADMAP] }
+};
+var map = new google.maps.Map(document.getElementById('map1'), myOptions);
+/*アイコン設定*/
+var icon = new google.maps.MarkerImage('/icon.png',/*画像url*/
+new google.maps.Size(70,84),/*アイコンサイズ*/
+new google.maps.Point(0,0)/*アイコン位置*/
+);
+var markerOptions = {
+position: latlng,
+map: map,
+icon: icon,
+title: 'かわさきピアノ音楽教室',/*タイトル*/
+animation: google.maps.Animation.DROP/*アニメーション*/
+};
+var marker = new google.maps.Marker(markerOptions);
+/*取得スタイルの貼り付け*/
+var styleOptions = [
+{
+"stylers": [
+{ "hue": '#14c0c9' }
+]
+}
+];
+var styledMapOptions = { name: 'かわさきピアノ音楽教室' }/*地図右上のタイトル*/
+var sampleType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
+map.mapTypes.set('style', sampleType);
+map.setMapTypeId('style');
+};
+google.maps.event.addDomListener(window, 'load', function() {
+googleMap();
+});
+</script>
+<div id="map1" style="width:100%; height:200px; margin:0 auto;"></div>
+</div><!-- gm_area -->
+</section>
+      </div><!-- nine columns -->
       
+<!-- PCサイド右 -->
       <div class="three colums">
+        <div class="fb-page" data-href="//www.facebook.com/facebook" data-tabs="timeline" data-width="300" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+          <blockquote cite="//www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="://www.facebook.com/facebook">Facebook</a>
+          </blockquote>
+        </div>
         
-      </div>
+        <aside class="recital">
+          <div class="left">
+          <h4>教室発表会</h4>
+          <p>年二回程度の発表会を行なっています</p>
+          </div>
+          
+          <img class="trim" src="img/common/bn_img1.jpg" alt="演奏発表会" />
+          
+        </aside>
+        <aside class="concert">
+          <div class="left">
+          <h4>講師演奏会情報</h4>
+          <p>最近の活動についてお知らせです</p>
+          </div>
+          <img class="trim" src="img/common/bn_img2.jpg" alt="講師演奏会情報" />
+        </aside>
+        <aside class="blog">
+          <div class="left">
+          <h4>講師ブログ</h4>
+          <p>レッスンの事から日々の出来事など</p>
+          </div>
+          <img class="trim" src="img/common/bn_img3.jpg" alt="講師ブログ" />
+        </aside>
+        
+        <div class="back"><a href="#">TOPへ戻る</a></div>
+      </div><!-- three columns -->
 
+    </div><!-- row -->
+  </div><!-- container -->
+</main>
+</div><!-- main_wrap -->
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <img src="" alt="かわさきピアノ音楽教室" />
+        <div class="sitemap">
+          <ul>
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">教室について</a></li>
+            <li><a href="#">レッスン内容</a></li>
+            <li><a href="#">ピアノの魅力</a></li>
+            <li><a href="#">講師</a></li>
+            <li><a href="#">レッスン場所</a></li>
+            
+          </ul>
+          <ul>
+            <li><a href="#">無料体験レッスン</a></li>
+            <li><a href="#">教室発表会</a></li>
+            <li><a href="#">講師演奏会情報</a></li>
+            <li><a href="#">講師ブログ</a></li>
+            <li><a href="#">お知らせ</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
-
-        
-
-  
-</main>
-</div>
+</footer>
 </body>
 </html>
