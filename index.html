@@ -14,7 +14,6 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link href="//fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet" />
 
   <!-- CSS
@@ -22,18 +21,38 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
-
+ 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="img/common/tone_p.png">
 
 </head>
 
 <body id="top">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
   <!-- Header共通部分ここから
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<header>
+<div class="header_bg">
+<header class="sp_nav_wrap">
+  <!-- sp用ナビゲーション -->
+          <ul class="sp_nav slide-inner" >
+            <li><a href="#">教室について</a></li>
+            <li><a href="#">レッスン内容</a></li>
+            <li><a href="#">講師</a></li>
+            <li><a href="#">レッスン場所</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
   <div class="container">
     <div class="row">
       <div class="twelve columns">
@@ -44,17 +63,10 @@
           <a href="#" class="lesson">
           <img src="img/sp/sp_free_lesson.png" alt="無料体験レッスン受付中" srcset="img/sp/sp_free_lesson@2x.png" />
           </a>
-          <i class="fa fa-bars bar" aria-hidden="true"></i>
+          <i class="fa fa-bars bar click_bar" aria-hidden="true"></i>
           </div>
           </div><!-- sp_h -->
-          <!-- sp用ナビゲーション -->
-          <ul class="sp_nav">
-            <li><a href="#">教室について</a></li>
-            <li><a href="#">レッスン内容</a></li>
-            <li><a href="#">講師</a></li>
-            <li><a href="#">レッスン場所</a></li>
-            <li><a href="#">お問い合わせ</a></li>
-          </ul>
+          
           <!-- PC header -->
           <div class="pc_h">
           <img class="u-full-width logo" src="img/pc/pc_logo_h.png" alt="岡山県岡山市にあるピアノ教室　かわさきピアノ音楽教室">
@@ -62,15 +74,10 @@
           <a href="#" class="lesson">
           <img class="u-max-full-width" src="img/pc/free_lesson.png" alt="無料体験レッスン受付中" />
           </a>
-          <a href="#">
-          <div class="contact">
-            
+          <a href="#" class="contact">
           <p><i class="fa fa-mobile" aria-hidden="true"></i>090-xxxx-xxxx</p>
           <p>お問い合わせはこちら</p>
-          
-          </div>
           </a>
-          <div class="bg"></div>
           </div>
           </div><!-- pc_h -->
       </div><!-- twelve columns -->
@@ -83,95 +90,114 @@
   <div class="container">
     <div class="row">
       <div class="twelve columns">
-          <ul>
-            <li><a href="#">ホーム</a></li>
-            <li><a href="#">教室について</a></li>
-            <li><a href="#">レッスン内容</a></li>
-            <li><a href="#">ピアノの魅力</a></li>
-            <li><a href="#">講師</a></li>
-            <li><a href="#">レッスン場所</a></li>
-            <li><a href="#">お問い合わせ</a></li>
+        
+          <ul class="pc_nav_in">
+            <li class="home"><a href="#"><span>ホーム</span></a></li>
+            <li class="about"><a href="#"><span>教室について</span></a></li>
+            <li class="lesson"><a href="#"><span>レッスン内容</span></a></li>
+            <li class="piano"><a href="#"><span>ピアノの魅力</span></a></li>
+            <li class="teacher"><a href="#"><span>講師</span></a></li>
+            <li class="access"><a href="#"><span>レッスン場所</span></a></li>
+            <li class="contact"><a href="#"><span>お問い合わせ</span></a></li>
           </ul>
+        
       </div>
     </div>
   </div>
 </nav>
 </header>
+</div>
 
-<div class="main_wrap">
 <main>
 <div class="container">
     <div class="row">
       <div class="twelve columns">
         <div class="main_v">
-          <!-- PCキャッチコピー -->
-          <div class="main_catch_pc">
-            <h2><img class="u-full-width" src="img/pc/pc_main_catch.png" alt="岡山県岡山市にあるクラシックピアノを中心に学べる音楽教室" /></h2>
-          </div>
           <!-- SPキャッチコピー -->
           <div class="main_img_sp">
             <h2><img class="u-full-width" src="img/sp/sp_main_score.png" alt="岡山県岡山市にあるクラシックピアノを中心に学べる音楽教室" /></h2>
+          </div>
+          <!-- PCキャッチコピー -->
+          <div class="main_catch_pc">
+            <h2><img class="u-full-width" src="img/pc/pc_main_catch.png" alt="岡山県岡山市にあるクラシックピアノを中心に学べる音楽教室" /></h2>
           </div>
           <div class="main_photo">
             <img class="u-full-width" src="img/common/main_v1.png" alt="mainvisual" />
           </div>
         </div>
+        <div class="sp_bg_score">
         <div class="main_catch_sp">
         <h2>岡山県岡山市にあるクラシックピアノを中心に学べる音楽教室</h2>
         <p>弾けるようになる楽しさを体験しませんか?</p>
         </div>
       <div class="int_sec">
-        <section class="int">
-          <img class="u-max-full-width" src="img/common/top1.jpg" alt="小さなお子様から大人まで"/>
+        <section class="int wow fadeInDown">
+          <a href="about.html">
+          <img class="u-max-full-width tone" src="img/common/top1.jpg" alt="小さなお子様から大人まで"/>
           <div class="flex">
           <h3>小さなお子様から大人まで</h3>
           <p>初めての方からステップアップしたい方まで</p>
           </div>
+          </a>
         </section>
-        <section class="int reverse">
+        <section class="int reverse wow fadeInDown">
+          <a href="lesson.html">
           <img class="u-full-width" src="img/common/top2.jpg" alt="クラシック"/>
           <div class="flex">
           <h3>クラシック</h3>
           <p class="indent">クラシックを中心に情緒豊かな楽曲を楽しめます</p>
           </div>
+          </a>
         </section>
-        <section class="int">
+        <section class="int wow fadeInDown">
+          <a href="piano.html">
           <img class="u-max-full-width" src="img/common/top3.jpg" alt="楽しく学べる"/>
           <div class="flex">
           <h3>楽しく学べる</h3>
           <p class="indent">各個人合わせた指導をさせていただきます</p>
           </div>
+          </a>
         </section>
-        <section class="int">
+        <section class="int reverse wow fadeInDown">
+          <a href="access.html">
           <img class="u-max-full-width" src="img/common/top4.jpg" alt="レッスン場所"/>
           <div class="flex">
           <h3>レッスン場所</h3>
           <p class="indent">共有スペースの一室を借りてレッスンをします</p>
           </div>
+          </a>
         </section>
+        
       </div><!-- int_sec -->  
+      
+    </div>
      </div><!-- twelve columns -->
     </div><!-- row -->
   </div><!-- container -->
   
   <div class="container">
     <div class="row">
-      <div class="nine columns"> 
+      <div class="eight columns"> 
       <section class="greeting">
         <h3><i class="fa fa-music" aria-hidden="true"></i>ご挨拶</h3>
         <div class="greet">
           <p>数ある音楽教室の中より、当音楽教室のサイトをご覧いただきまして、誠にありがとうございます。</p>
-          <p>当音楽教室は2018年に開講するピアノを中心とした教室で、大人から子供まで幅白い層に対応し、音楽を楽しむことのできる教室です。</p>
+          <p>当音楽教室は2018年に開講するピアノを中心とした教室で、大人から子供まで幅広い層に対応し、音楽を楽しむことのできる教室です。</p>
         </div>
       </section>
       <section class="info">
         <h3><i class="fa fa-music" aria-hidden="true"></i>お知らせ</h3>
         <div class="wrap">
         <dl class="info_bg">
-          <dt>2017.03.02</dt>
-          <dd><a href="#">ホームページ開発中</a></dd>
+          <a href="#" class="info_link">
           <dt>2017.03.02</dt>
           <dd>ホームページ開発中</dd>
+          </a>
+          <a href="#" class="info_link">
+          <dt>2017.03.02</dt>
+          <dd>
+            ホームページ開発中</dd>
+          </a>
         </dl>
         <p class="more">MORE</p>
         </div>
@@ -197,7 +223,7 @@ mapTypeControlOptions: { mapTypeIds: ['style', google.maps.MapTypeId.ROADMAP] }
 };
 var map = new google.maps.Map(document.getElementById('map1'), myOptions);
 /*アイコン設定*/
-var icon = new google.maps.MarkerImage('/icon.png',/*画像url*/
+var icon = new google.maps.MarkerImage('img/common/map-marker.svg',/*画像url*/
 new google.maps.Size(70,84),/*アイコンサイズ*/
 new google.maps.Point(0,0)/*アイコン位置*/
 );
@@ -229,24 +255,24 @@ googleMap();
 <div id="map1" style="width:100%; height:200px; margin:0 auto;"></div>
 </div><!-- gm_area -->
 </section>
-      </div><!-- nine columns -->
+      </div><!-- eight columns -->
       
 <!-- PCサイド右 -->
-      <div class="three colums">
-        <div class="fb-page" data-href="//www.facebook.com/facebook" data-tabs="timeline" data-width="300" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
-          <blockquote cite="//www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="://www.facebook.com/facebook">Facebook</a>
-          </blockquote>
-        </div>
-        
+<div class="four columns">
+ <div class="side">
+<div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="300" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+      <div class="bn">
+        <a href="#">
         <aside class="recital">
           <div class="left">
           <h4>教室発表会</h4>
           <p>年二回程度の発表会を行なっています</p>
           </div>
           
-          <img class="trim" src="img/common/bn_img1.jpg" alt="演奏発表会" />
-          
+          <img class="trim u-max-full-width" src="img/common/bn_img1.jpg" alt="演奏発表会" />
         </aside>
+        </a>
+        <a href="#">
         <aside class="concert">
           <div class="left">
           <h4>講師演奏会情報</h4>
@@ -254,6 +280,8 @@ googleMap();
           </div>
           <img class="trim" src="img/common/bn_img2.jpg" alt="講師演奏会情報" />
         </aside>
+        </a>
+        <a href="#">
         <aside class="blog">
           <div class="left">
           <h4>講師ブログ</h4>
@@ -261,20 +289,29 @@ googleMap();
           </div>
           <img class="trim" src="img/common/bn_img3.jpg" alt="講師ブログ" />
         </aside>
-        
-        <div class="back"><a href="#">TOPへ戻る</a></div>
-      </div><!-- three columns -->
-
+        </a>
+      </div>
+</div>
+      </div><!-- four columns -->
     </div><!-- row -->
   </div><!-- container -->
-</main>
-</div><!-- main_wrap -->
-
-<footer>
-  <div class="container">
+  <div class="container back_wrap">
     <div class="row">
       <div class="twelve columns">
-        <img src="" alt="かわさきピアノ音楽教室" />
+          <div class="toTop"><img src="img/common/back_top.png" alt="TOPへ戻る" /></di>
+      </div>
+    </div>
+  </div>
+          
+</main>
+
+<footer class="pc_ft sp_ft">
+  <div class="container ft_bg">
+    <div class="row">
+      <div class="twelve columns">
+        <div class="footer_in">
+        <img class="u-max-full-width footerlogo" src="img/sp/footerlogo.png" alt="かわさきピアノ音楽教室" srcset="img/sp/footerlogo@2x.png"/>
+        <img class="u-max-full-width footerlogo_pc" src="img/pc/pc_logo_h.png" alt="かわさきピアノ音楽教室" />
         <div class="sitemap">
           <ul>
             <li><a href="#">ホーム</a></li>
@@ -294,9 +331,49 @@ googleMap();
             <li><a href="#">お問い合わせ</a></li>
           </ul>
         </div>
+        </div>
+        <p class="copyright">2018 KAWASAKI piano school All Rights Researved.</p>
       </div>
     </div>
   </div>
 </footer>
+ 
+ 
+ <!-- jQuery 
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+ <!-- Wowアニメーション
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <script src="js/wow.min.js"></script> 
+ <script>
+    new WOW().init();
+  </script>
+  
+  <!-- SP用ナビゲーション
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <script>
+   $(document).ready(function() {
+  $(".click_bar").click(function(){
+    $(".sp_nav").slideToggle();
+  });
+});
+ </script>
+ 
+ 
+ 
+ <!-- backtop
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+  $(function(){
+  $('.toTop').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 800);
+    return false;
+  });
+});
+</script>
+  
 </body>
 </html>

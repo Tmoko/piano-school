@@ -1,5 +1,6 @@
 @charset "utf-8";
-//common style
+/*common style
+-------------------------------------------- */
 
 @import "compass";
 
@@ -20,6 +21,15 @@ $yellow : #e6dea9;
 $green : #14c0c9;
 $font : #b2804c;
 
+/*Webフォント*/
+
+@font-face {
+  font-family: 'set_hannari';  
+  src: url('../font/hannari.otf') format('opentype'),
+       url('../font/hannari.woff') format('woff'),
+       url('../font/hannari.ttf') format('truetype');
+}
+
 body{
         background: #e3f4f1;
 }
@@ -27,7 +37,7 @@ body{
 header{
     background: #fff;
     padding: 2%;
-    box-shadow: 0px 6px 3px -3px rgba(215,232,229,0.6);;
+    box-shadow: 0px 6px 3px -3px rgba(215,232,229,0.6);
 }
 
 h1,h2,h3{
@@ -55,26 +65,36 @@ ul{
 }
 
 @mixin fontset{
-    font-family: "Hannari", $ja_m ;
-    letter-spacing: 0.2rem;
+    font-family: "set_hannari", "Hannari", $ja_m ;
+    letter-spacing: 0.1rem;
 }
 
 /* SP用 
-------------------------------------------------*/
-//header
+----------------------------------------------------------------*/
+
+/* header共通ここから
+-------------------------------------------- */
+.header_bg{
+    position: fixed;
+    height: 13%;
+    z-index: 99;
+    width: 100%;
+    min-width: 330px;
 header{
+    
+    
+        .pc_h,.sp_nav,.pc_nav{
+        display: none;
+    }
     .sp_h{
         display: flex;
         justify-content: space-between;
         .logo{
             width:223px;
             height: 40px;
-            
-
         }
         .sp_h_right{
             width:80px;
-        
             display: flex;
             align-items: flex-end;
             .lesson{
@@ -95,24 +115,57 @@ header{
         }      
         
     }
-    
-    .pc_h,.sp_nav,.pc_nav{
-        display: none;
-    }
+
 
 }//header,nav
+}//header_bg
 
-
-.main_wrap{
+.sp_nav_wrap{
     
 
-main{
-    background: url('img/common/bg_score.png') repeat-y;
-    background-size:cover;
-    max-width: 100%;
+    .sp_nav{
+        position: absolute;
+        top: 55%;
+        right: 0;
+        padding-right: 2px;
+        display: none;
+        width: 100%;
+        text-align: right;
+        line-height: 2.8;
+        background: rgba(255,255,255,0.8);
+        z-index: 1;
+        li{
+            border-bottom: solid 1px #eee;
+            font-weight: bold;
+            @include fontset;
+            a{
+                padding-right: 3%;
+                color: #626262;
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
+            
+        }
+    }
+}
+/* header,nav共通ここまで
+-------------------------------------------- */
 
-//main_v
+    
+main{
+    padding-top: 13%;
+    
+
+/*メインビジュアル
+----------------------------------------------------------- */
+
     .main_v{
+        
+        .main_catch_pc{
+            display: none;
+        }
+    
         .main_img_sp{
             position: absolute;
             top: 0;
@@ -124,11 +177,14 @@ main{
     }//main_v
     
     .main_catch_sp{
+        backgroud: url('../img/common/bg_img.png') no-repeat top;
+        height: auto;
+        backgroud-size: contain;
         h2{
             @include fontsize(18);
             color: $font;
             line-height: 1.6;
-            font-family: "Hannari", $ja_m ;
+            font-family: "set_hannari", "Hannari", $ja_m ;
             letter-spacing: 0.2rem;
             font-weight: bold;
         }
@@ -140,172 +196,42 @@ main{
             
         }
     }
-    
-//int_sec
 
-//ご挨拶
-    .greeting{
-        padding-top: 20px;
-        position: relative;
-        &:before{
-            content: url('img/common/greeting_img.png') no-repeat;
-            width:148px;
-            height:153px;
+/* 教室紹介部分ここから
+---------------------------------------------------------*/
+    
+        .sp_bg_score{
+        background: url('../img/common/bg_score.png');
+        background-size: 100%;
+        background-repeat: repeat-y;
+        background-position: 0 -25%;
+        .main_catch_sp{
             display: block;
-           
-        }
-        h3{
-            @include fontsize(20);
-            padding-bottom: 2%;
-            
-            i{
-                padding-right: 2%;
-            }
-        }
-        .greet{
-            border-radius: 5px;
-            background: #fff;
-            padding: 5%;
-            
-            
-            }
-
-    }//greeting
-    
-//お知らせ  
-    .info{
-        padding: 20px 0;
-        h3{
-            @include fontsize(20);
-            padding-bottom: 2%;
-            i{
-                padding-right: 2%;
-            }
         }
         
-        .wrap{
-            position: relative;
-            padding: 5%;
-            border-radius: 5px;
-            background: #fff;
-            .info_bg{
-            
-
-        }
-            .more{
-                position: absolute;
-                top: 90px;
-                right: 5px;
-                @include fontsize(14);
-                margin-left: 68%;
-                border: solid 1px $yellow;
-                border-radius: 5% 5% 5%;
-                padding:3px 20px;
-                color: $yellow;
-                &:hover{
-                    color: #fff;
-                    background: $yellow;
-                    transition: 0.8s ease;
-                }
-            }
-        }
-
-        
-        
-        
-    }
-//アクセス
-    .access{
-        @extend .info;
-    }
-
-//バナー
-    .recital{
-        display: flex;
-        background: $pink;
-        margin-bottom: 10px;
-        .left{
-            padding: 3% 2% 3% 3%;
-            width: 49%;
-            text-align: right;
-            h4{
-                @include fontsize(16);
-                font-weight: lighter;
-                text-shadow: 1px 1px 0 #fff,
-                             1px -1px 0 #fff,
-                             -1px 1px 0 #fff,
-                             -1px -1px 0 #fff;
-                
-                padding-bottom: 2%;
-            }
-            p{
-                @include fontsize(12);
-                
-            }
-        }
-        .trim{
-            width: 54.5%;
-            height: 50%;
-            overflow: hidden;
-
-        }
-
-        }//recital
-    
-    .concert{
-        @extend .recital;
-            flex-direction: row-reverse;
-            background: $yellow;
-            .left{
-                text-align: left;
-            }
-    }
-    .blog{
-        @extend .recital;
-        
-    }
-
-//topへ戻る
-    .back{
-        display: inline-block;
-        background: #fff;
-        padding:10px;
-    }
-    
-   
-    
-}//main
-}//main_wrap
-
-footer{
-    padding: 20px 20px;
-    background: #fff;
-    text-align: center;
-    .sitemap{
-        @include fontsize(10);
-        display: flex;
-        justify-content: space-around;
-        line-height: 2.5;
-    }
-}
-
-/*SP用（899px以下）*/
-@media(max-width: 899px){
-
-main{
-    .main_v{
-        .main_catch_pc{
-            display: none;
-        }
     }
     .int_sec{
+        content:"";
+            display: block;
+            width: 100%;
+            height: auto;
+            background-image: url('../img/common/tone_p.png'), 
+                              url('../img/common/tone_b.png'), 
+                              url('../img/common/tone_y.png');
+            background-repeat: no-repeat,
+                               no-repeat,
+                               no-repeat;  
+            background-size: 7%,8%,8%;
+            background-position: 13.333333333333334% 23.59882005899705%,
+                                 60% 50.14749262536873%,
+                                 34% 77%;
+            
     
     .int{
+        
         display: flex;
         align-items: center;
         padding: 2% 2% 6% 2%;
-        position: relative;
-       
         
 
         img{
@@ -313,10 +239,7 @@ main{
             border-radius: 90%;
             border:solid 10px #fff;
             box-sizing: border-box;
-            &::nth-child(odd){
-                position: absolute;
-                right:0;
-            }
+
             
             
             
@@ -339,21 +262,251 @@ main{
         }
         
         
-         }
+         }//.int
+         
+         .reverse{
+        display: flex;
+        flex-direction: row-reverse;
+    }    
     
+        }//.int_sec
+
+
+/* 教室紹介部分ここまで
+---------------------------------------------------------*/
+
+//ご挨拶
+
+    .greeting{
+        padding-top: 20px;
+        position: relative;
+        h3{
+            @include fontsize(20);
+            padding-bottom: 2%;
+            font-family: "set_hannari", "Hannari", $ja_m ;
+            
+            i{
+                padding-right: 2%;
+            }
+        }
+        .greet{
+            border-radius: 5px;
+            background: #fff;
+            padding: 5% 5% 30% 5%;
+            background: url('../img/common/greeting_img.png') no-repeat,
+                        #fff;
+            background-position:right bottom;
+            background-size: 148px 153px;
+            
+            
+            }
+
+    }//greeting
+    
+//お知らせ  
+    .info{
+        padding: 20px 0;
+        h3{
+            @include fontsize(20);
+            font-family: "set_hannari", "Hannari", $ja_m ;
+            padding-bottom: 2%;
+            i{
+                padding-right: 2%;
+            }
+        }
+        
+        .wrap{
+            position: relative;
+            padding: 5%;
+            border-radius: 5px;
+            background: #fff;
+            padding-bottom: 50px;
+            .info_bg{
+
+        }
+            .more{
+                position: absolute;
+                top: 70%;
+                right: 10px;
+                @include fontsize(14);
+                margin-left: 68%;
+                border: solid 1px $yellow;
+                border-radius: 5% 5% 5%;
+                padding:3px 20px;
+                color: $yellow;
+                &:hover{
+                    color: #fff;
+                    background: $yellow;
+                    transition: 0.8s ease;
+                }
+            }
+        }
+
+        
+        
+        
+    }
+    
+//アクセス
+    .access{
+        @extend .info;
+    }
+
+//バナー
+.side{
+    margin-top: 20px;
+    .fb-page{
+        width: 100%;
+    }
+    .bn{
+        margin-top: 20px;
+        width: 100%;
+        a:hover{
+            color: #626262;
+        }
+    .recital{
+        display: flex;
+        width: 100%;
+        background: $pink;
+        align-items: center;
+
+        margin-bottom: 10px;
+        .left{
+            padding: 3% 2% 3% 3%;
+            width: 50%;
+            text-align: right;
+            box-sizing: border-box;
+            h4{
+                @include fontsize(16);
+                font-weight: lighter;
+                text-shadow: 1px 1px 0 #fff,
+                             1px -1px 0 #fff,
+                             -1px 1px 0 #fff,
+                             -1px -1px 0 #fff;
+                
+                padding-bottom: 2%;
+            }
+            p{
+                @include fontsize(12);
+                line-height: 1.2;
+                
+            }
+        }
+        .trim{
+            width: 50%;
+            height: auto;
+            
+
+        }
+        img{
+            display: block;
+        }
+
+        }//recital
+    
+    .concert{
+        @extend .recital;
+            flex-direction: row-reverse;
+            background: $yellow;
+            .left{
+                text-align: left;
+                
+            }
+            .trim{
+                width: 50%;
+            }
+    }
+    .blog{
+        @extend .recital;
+        background: #e8c56e;
+        
+    }
+}//bn
+}//side
+
+/* topへ戻る　共通部分ここから
+---------------------------------------------- */
+.back_wrap{
+    text-align: center;
+
+        .toTop{
+            display: inline-block;
+        padding: 10px;
+        margin: 10px auto 20px auto;
+            width:120px;
+            height:21px;
+            img{
+                vertical-align: bottom;
+            }
         }
     
-    }
 }
 
+/* topへ戻る　共通部分ここまで
+---------------------------------------------- */
+   
+    
+}//main
+
+/* footer　共通部分ここから
+---------------------------------------------- */
+
+footer{
+    text-align: center;
+    box-shadow: 0px -6px 3px -3px rgba(215,232,229,0.6);
+    .footerlogo{
+        margin-top: 5%;
+        padding-bottom: 5%;
+        width: 220px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        
+    }
+    .footerlogo_pc{
+        display: none;
+    }
+
+    .sitemap{
+        margin: 0 auto;
+        text-align: left;
+        @include fontsize(10);
+        display: flex;
+        width: 70%;
+        justify-content: space-around;
+        line-height: 2.5;
+        margin-bottom: 10px;
+    }
+    
+    .copyright{
+        @include      fontsize(10);
+        display: block;
+        margin-top: 24%;
+    }
+}
+.sp_ft{
+    padding-top: 5%;
+    background: url('../img/common/footer_img1.png'),
+                #fff;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 0 80%;
+}
+
+
 /* PC用(900px以上)
-------------------------------------------------*/
+-------------------------------------------------------*/
 @media(min-width: 900px){
     
-//header
+/*header,nav共通ここから
+-------------------------------------------- */
+.header_bg{
+    position: relative;
     header{
-        padding-top: 50px;
-        .sp_h{
+            background:#fff;
+            position: relative;
+  
+        .sp_h,.sp_nav{
             display: none;
             
         }
@@ -363,21 +516,28 @@ main{
             justify-content: space-between;
             align-items: flex-end;
             vertical-align: bottom;
-            z-index:0;
+            padding: 5% 10px 50px 0;
+            background:  url('../img/pc/contact_frame.png');
+            background-size: 250px; 
+            background-repeat: no-repeat;
+            background-position: 100% 40%;
+            
+            
             .logo{
                 width: 250px;
                 height: auto;
                 
             }
             .pc_h_right{
-                width: 490px;
+                padding: 0x 10px 50px 0;
+                width: 480px;
                 display: flex;
-                justify-content: space-between;
-                position: relative;
-                z-index: 1;
-               
+                
+                
+                
                 .lesson{
                     vertical-align: bottom;
+                    margin-right: 75px;
                     a{
                         display: block;
                     
@@ -394,74 +554,240 @@ main{
                     
                 }
                 .contact{
-                    position: reletive;
-                    z-index: 2;
- 
+                    text-align: center;
+                    p{
+                        color: $font;
+                        
+                    i{
+                        padding-right: 2%;
+                    }
+                    }
                 }
-                
-                .bg{
-                    background: url(../img/pc/contact_frame.png) no-repeat;
-                    background-size: 75%;
-                    width: 324px;
-                    height: 123px;
-                    position: absolute;
-                    top: -35px;
-                    right:-80px;
-                   
-                    z-index: 0;
-                    }   
-                                  
-                    
+   
             }//pc_h_right
             
         }//.pc_h
-    }//pc header
-    
-    
-    nav{
-        padding-top: 50px;
-        ul{
-            text-align: center;
-            display:flex;
-            flex-basis: 189px;
+
+/* PC用ナビゲーションここから
+-------------------------------------------------------------------- */
+.pc_nav{
+        display: block;
+        
+        .pc_nav_in{
+            display: flex;
+            width: 100%;
+            height: 50px;
+            margin: 0 auto;
+            position: relative;
+ 
             li{
-                padding:20px 30px;
-                background: #eee;
-                border-left: solid 1px #b2804c;
-                &::after-child{
-                    border-right: solid 1px #b2804c;
+                text-align: center;
+                width: 14.3%;
+                border-left: solid 1px $font;
+                position: relative;
+                
+                &:last-child{
+                    border-right: solid 1px $font;
                 }
-            
+                &:after{
+                            content: " ";
+                            display: block;
+                            width: 26px;
+                            height: 20px;
+                            background: $pink;
+                            border-radius: 100% 80% 100% 80%;
+                            position: absolute;
+                            
+                        }
+                        &:nth-child(even){
+                            &:after{
+                                background: $yellow;
+                            }
+                        }
+                
+           /*     &:hover{
+                        width: 14.3%;
+                        height: 50px;
+                        &:after{
+                            content: " ";
+                            display: block;
+                            width: 26px;
+                            height: 20px;
+                            background: $pink;
+                            border-radius: 100% 80% 100% 80%;
+                            position: absolute;
+                            
+                        }
+                        &:nth-child(even){
+                            &:after{
+                                background: $yellow;
+                            }
+                        }
+                        
+                }
+                */
+                        
+                a{
+                    display: block;
+                    height: 50px;
+                    
+                    
+                    span{
+                        @include fontsize(16);
+                        font-family: "Hannari";
+                        display: block;
+                        padding-top: 10px;
+                        position: relative;
+                        z-index: 1;
+                        
+                    }
+                }
+                }//li
+                
+/* PC用ナビゲーション個々の動き
+------------------------------------------*/            
+            .home{
+                &:after{
+                    top: 50%;
+                    left: 20%;
+              /*  &:hover{
+                    &:after{
+                    
+                    }
+                    
+                } */
+                a > span{
+                    z-index: 99;
+                }
+                }
+                &:hover{
+                    &:after{
+                        transform: translate(5px 4px);
+                    }
+                }
+                
             }
-        }
-    }//nav
+            .about{
+               
+                &:after{
+                    top: 30%;
+                    left: 25%;
+                    transition: .4s;
+                }
+                &:hover{
+                    &:after{
+                   
+                }
+                    
+                }
+            } 
+            .lesson{
+                &:after{
+                    top: 0;
+                    left: 30%;
+                }
+                &:hover{
+                    &:after{
+                   
+                    }
+                    
+                }
+            }
+            .piano{
+                &:after{
+                    top: 36%;
+                    left: 30%;
+                }
+                &:hover{
+                    &:after{
+                    
+                    }
+                    
+                }
+            } 
+            .teacher{
+                &:after{
+                    top: 45%;
+                    left: 30%;
+                }
+                &:hover{
+                    &:after{
+ 
+                    }
+                    
+                }
+            } 
+            .access{
+                &:after{
+                    top: 0;
+                    left: 30%;
+                }
+                &:hover{
+                    &:after{
+                    
+                    }
+                    
+                }
+            } 
+            .contact{
+                &:after{
+                    top: 50%;
+                    left: 40%;
+                }
+                &:hover{
+                    &:after{
+                    
+                    }
+                    
+                }
+            } 
+
+            
+            }//pc_nav_in
+    }//pc_nav
     
+/* PC用ナビゲーションここまで
+-------------------------------------------------------------------- */
+    }//header
+}//header_bg
+/*header,nav共通ここまで
+-------------------------------------------- */   
     
-  main{
+ main{
+     padding-top: 0;
     .main_v{
+        position: relative;
+        .main_img_sp{
+            display: none;
+        }
         .main_catch_pc{
             display: block;
+            width: 100%;
             position: absolute;
             top: 0;
             
         }        
         
     }
+    .sp_bg_score{
+        background: none;
     .main_catch_sp{
             display: none;
-            
         }
     .int_sec{
         padding-top:30px;
         display: flex;
         text-align: center;
+        background: url('../img/common/bg_img.png') no-repeat;
+        background-position: 0 100%;
+
    
     .int{
-        width: 250px;
+        display: block;
+        width: 25%;
         h3{
             @include fontsize(24);
             letter-spacing: 0;
-            font-family: "Hannari";
             padding-top: 20px;
         }
         img{
@@ -479,7 +805,127 @@ main{
     
     
     }//int_sec
+}
+
+//お知らせ
+.info_link{
+    display: block;
+    margin-bottom: 2%;
+    dt{
+        float: left;
+        margin-right: 2%;
+    }
+    dd{
+        float: left;
+    }
+    &:after{
+        display: block;
+        content:"";
+        clear: both;
+    }
+}
+/* .wrap{
+    height: 100px;
+    .info_bg{
+        display: block;
+        width: 500px;
+        .info_link{
+            display: block;
+            dt{
+                 float: left;
+            }
+            dd{
+                 float: left;
+                 border-bottom: solid 1px $yellow;
+            }
+            ::after{
+                display: block;
+                content:"";
+                clear: both;
+                
+            }
+        
+        
+        }
+    }
+}
+*/
+        
+    .greeting{
+        width: 90%;
+        height: auto;
+        .greet{
+
+        }
+    }
     
+    .info{
+        width: 90%;
+        more{
+            
+        }
+    }
+    .recital{
+        .trim{
+            vertical-align: bottom;
+        }
+    }
+
+.back_wrap{
+    text-align: right;
+}
 
   }//main
-}//main_wrap
+  
+  
+
+/* footer共通ここから
+-------------------------------------------- */
+  footer{
+      
+      .ft_bg{
+    background: url('../img/common/footer_img1.png'),
+                url('../img/common/footer_img2.png');
+    background-repeat: no-repeat,no-repeat;
+    background-position: 0 100%, 100% 80%;
+    background-size: 20%, 20%;
+    padding-top: 5%;
+      }
+     .footer_in{
+         display: flex;
+         width: 80%;
+    .footerlogo{
+        display: none;
+    }
+    .footerlogo_pc{
+        display: block;
+        width: 337px;
+        height: 54px;
+        margin-left: 10%;
+    }
+    .sitemap{
+        @include fontsize(10);
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+        line-height: 2.5;
+        text-align: left;
+        }
+     }//footer_in
+    
+    .copyright{
+        text-align: right;
+        margin-top: 0;
+    }
+
+    }//footer
+    
+    .pc_ft{
+        background: #fff;
+        padding-top: 0;
+    }
+
+/* footer共通ここまで
+-------------------------------------------- */
+}
+    
