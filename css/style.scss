@@ -50,14 +50,25 @@ h1,h2,h3,ul,li,p,a,img,dl,dt,dd{
     color: #626262;
 }
 
+th,td{
+    border: none;
+}
 a{
     text-decoration: none;
     color: #626262;
+    &:hover{
+        color: #626262;
+    }
 }
 
 ul{
     list-style: none;
 }
+
+//sp用改行クラス
+.br_sp{
+    display: none;
+}  
 @mixin clearfix{
     content: "";
     display: block;
@@ -66,7 +77,7 @@ ul{
 
 @mixin fontset{
     font-family: "set_hannari", "Hannari", $ja_m ;
-    letter-spacing: 0.1rem;
+    letter-spacing: -0.1rem;
 }
 
 /* SP用 
@@ -80,9 +91,8 @@ ul{
     z-index: 99;
     width: 100%;
     min-width: 330px;
+    
 header{
-    
-    
         .pc_h,.sp_nav,.pc_nav{
         display: none;
     }
@@ -154,7 +164,7 @@ header{
 
     
 main{
-    padding-top: 13%;
+    padding-top: 63px;
     
 
 /*メインビジュアル
@@ -169,17 +179,28 @@ main{
         .main_img_sp{
             position: absolute;
             top: 0;
+            z-index: 9;
         }
 
         .main_photo{
-            padding-top: 15px;
+            margin-top: 15px;
+            position: relative;
+            img{
+                position: absolute;
+            left: 0;
+            top: 0;
+            }
         }
+
+         
+
     }//main_v
     
     .main_catch_sp{
-        backgroud: url('../img/common/bg_img.png') no-repeat top;
+     //   backgroud: url('../img/common/bg_img.png') no-repeat top;
         height: auto;
-        backgroud-size: contain;
+    //   backgroud-size: contain;
+        margin-top: 2%;
         h2{
             @include fontsize(18);
             color: $font;
@@ -201,10 +222,10 @@ main{
 ---------------------------------------------------------*/
     
         .sp_bg_score{
+        padding-top: 60%;
         background: url('../img/common/bg_score.png');
         background-size: 100%;
         background-repeat: repeat-y;
-        background-position: 0 -25%;
         .main_catch_sp{
             display: block;
         }
@@ -355,9 +376,11 @@ main{
 //バナー
 .side{
     margin-top: 20px;
-    .fb-page{
-        width: 100%;
-    }
+    .fb_iframe_widget,
+    .fb_iframe_widget span,
+    .fb_iframe_widget iframe[style]{
+                            width: 100% !important;
+                            }
     .bn{
         margin-top: 20px;
         width: 100%;
@@ -641,17 +664,24 @@ footer{
                         z-index: 1;
                         
                     }
+                    &:hover{
+                        color: #626262;
+                    }
                 }
                 }//li
                 
 /* PC用ナビゲーション個々の動き
 ------------------------------------------*/            
             .home{
-                &:after{
+                &::after{
                     top: 50%;
                     left: 20%;
+              
+              
               /*  &:hover{
-                    &:after{
+                    &::after{
+                        top: 60%;
+                        left: 18%;
                     
                     }
                     
@@ -660,11 +690,7 @@ footer{
                     z-index: 99;
                 }
                 }
-                &:hover{
-                    &:after{
-                        transform: translate(5px 4px);
-                    }
-                }
+
                 
             }
             .about{
@@ -765,6 +791,7 @@ footer{
             width: 100%;
             position: absolute;
             top: 0;
+            z-index: 9;
             
         }        
         
@@ -784,7 +811,6 @@ footer{
    
     .int{
         display: block;
-        width: 25%;
         h3{
             @include fontsize(24);
             letter-spacing: 0;
@@ -824,33 +850,10 @@ footer{
         clear: both;
     }
 }
-/* .wrap{
-    height: 100px;
-    .info_bg{
-        display: block;
-        width: 500px;
-        .info_link{
-            display: block;
-            dt{
-                 float: left;
-            }
-            dd{
-                 float: left;
-                 border-bottom: solid 1px $yellow;
-            }
-            ::after{
-                display: block;
-                content:"";
-                clear: both;
-                
-            }
-        
-        
-        }
-    }
-}
-*/
-        
+
+.side{
+    margin-top: 58px;
+} 
     .greeting{
         width: 90%;
         height: auto;
@@ -876,8 +879,8 @@ footer{
 }
 
   }//main
-  
-  
+ 
+
 
 /* footer共通ここから
 -------------------------------------------- */
@@ -928,4 +931,458 @@ footer{
 /* footer共通ここまで
 -------------------------------------------- */
 }
+
+
+/* about.html
+-------------------------------------------- */
+
+//背景
+.bg_score{
+    position: relative;
+    content: "";
+    background: url('../img/common/bg_score.png') repeat-y top left;
+    background-size: contain;
+    background-position: 0 -80px;
+    width: 100%;
+} 
+
+.about_desc_wrap{
+    margin-bottom: 10%;
+    .title{
+        display: inline-block;
+        h2{
+            @include fontset;
+        }
+    .line{
+        display: block;
+        width: 100%;
+        border-top: solid 1px $font;
+        border-bottom: solid 3px $font;
+        padding:3px 0 0 0;
+        margin-bottom: 3%;
+        }
+    }
+    .about_wrap{
+        
+        p{
+            @include fontsize(14);
+        }
+    }
+    .about_desc_right{
+        padding-top: 2%;
+        margin-bottom: 2%;
+        img{
+            vertical-align: bottom;
+            border: solid 10px #fff;
+            border-radius: 5px;
+        }
+    }
+}//about_desc_wrap
+
+.column{
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+}
+
+.desc2_wrap{
+        .desc2_title{
+            display: block;
+            @include fontsize(20);
+            color: #626262;
+            text-align: center;
+            margin-bottom: 5%;
+        }
+
+        
+        h3{
+            @include fontsize(18);
+            color: $font;
+            position: relative;
+            display: block;
+            padding-left: 43px;
+           // padding-top: 0.7%;
+            margin-bottom: 5%;
+            
+            
+            }
+        .align{
+            padding-top: 5px;
+        }
+
+        .pt1::before{
+            position: absolute;
+                content: "";
+                width: 38px;
+                height: 38px;
+                background: url('../img/sp/pt1@2x.png') top left no-repeat;
+                background-size: 38px 38px;
+                
+        }
+        .pt2::before{
+            position: absolute;
+                content: "";
+                width: 38px;
+                height: 38px;
+                background: url('../img/sp/pt2@2x.png') top left no-repeat;
+                background-size: 38px 38px;
+                padding-right: 5%;
+        }
+        .pt3::before{
+            position: absolute;
+                content: "";
+                width: 38px;
+                height: 38px;
+                background: url('../img/sp/pt3@2x.png') top left no-repeat;
+                background-size: 38px 38px;
+                padding-right: 5%;
+        }
+        
+        p{
+            @include fontsize(14);
+            color: $font;
+            margin-bottom: 10%;
+        }
+        .wrap{
+            text-align: right;
+        .click_re{
+            display: inline-block;
+            text-align: center;
+            background: $pink;
+            padding: 3% 10%;
+            border-radius: 5px;
+            }
+        }
+    }
     
+/* lesson.html
+-------------------------------------------- */
+.lesson_desc_wrap{
+
+    .title{
+        display: inline-block;
+        h2{
+            @include fontset;
+        }
+    .line{
+        display: block;
+        width: 100%;
+        border-top: solid 1px $font;
+        border-bottom: solid 3px $font;
+        padding:3px 0 0 0;
+        margin-bottom: 3%;
+        }
+    }
+        .lesson_desc{
+                background: #fff;
+                border-radius: 10px;
+                padding: 5%;
+                margin-bottom: 5%;
+                i{
+                    @include fontsize(20);
+                    padding-right: 2%;
+                    color: $font;
+                }
+                p{
+                    margin: 5px 0 5px;
+                    margin-left: 25px;
+                }
+        }
+
+    .lesson_desc_right{
+        padding-top: 2%;
+        margin-bottom: 2%;
+        img{
+            vertical-align: bottom;
+        }
+    }
+}//lesson_desc_wrap
+
+    .wrap{
+            text-align: center;
+            margin-bottom: 5%;
+
+        .click_free{
+            width: 180px;
+            display: inline-block;
+            text-align: center;
+            background: $pink;
+            padding: 10px 40px;
+            border-radius: 5px;
+            
+            }
+        }
+
+.le_desc2_wrap{
+        .desc2_title{
+            display: block;
+            @include fontsize(20);
+            color: #626262;
+            text-align: center;
+            margin-bottom: 5%;
+        }
+
+        
+        h3{
+            @include fontsize(18);
+            color: $font;
+            position: relative;
+            display: block;
+            margin-bottom: 5%;
+            i{
+                padding-right:2%;
+            }
+            i.y{
+                color: $yellow;
+            }
+            i.p{
+                color: $pink;
+            }
+            i.g{
+                color: $green;
+            }
+            }
+        .align{
+            padding-top: 5px;
+        }
+        
+        p{
+            @include fontsize(14);
+            color: $font;
+            margin-bottom: 10%;
+        }
+        table{
+            tr,td{
+                vertical-align: top;
+                padding:0 10px 5px 0;
+                @include fontsize(11);
+                
+            }
+        }
+    
+}
+
+.lesson_desc3_wrap{
+        .desc3_title{
+            display: block;
+            @include fontsize(20);
+            color: #626262;
+            text-align: center;
+            margin-bottom: 5%;
+        }
+        p{
+            @include fontsize(14);
+            color: $font;
+        }
+    
+}
+
+.access_desc_wrap{
+    @extend .lesson_desc_wrap;
+    
+    p{
+        margin-top: 2%;
+       
+        line-height: 2.0;
+    }
+    .access_loca{
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: 120px;
+        }
+ 
+    }
+}
+
+
+/* profile.html
+-------------------------------------------- */
+.profile_desc_wrap{
+    @extend .lesson_desc_wrap;
+
+.profile_wrap{
+    margin-top: 2%;
+}
+.profile_left{
+    img{
+        vertical-align: bottom;
+        width: 300px;
+        border: solid 10px #fff;
+        border-radius: 5%;
+    }
+}
+.profile_right{
+    margin-top: 5%;
+    background: rgba(255,255,255,0.6);
+    border-radius: 10px;
+    padding: 10%;
+    h3{
+        text-align: center;
+        @include fontsize(24);
+        @include fontset;
+        padding-bottom: 10px;
+        .br{
+            display: block;
+            @include fontsize(16);
+        }
+    }
+}
+
+.wrap{
+    margin-top: 5%;
+    .click_play{
+        @extend .click_free;
+        background: $yellow;
+    }
+}
+
+}
+
+
+/* (PC:900px)
+-------------------------------------------- */
+@media(min-width: 900px){
+
+.bg_score{
+    position: relative;
+    content: "";
+    background: url('../img/common/bg_score.png') repeat-y top left;
+    background-size: contain;
+    background-position: 0 -500px;
+    width: 100%;
+} 
+    .about_desc_wrap,.lesson_desc_wrap,.access_desc_wrap{
+        margin-top: 2%;
+        .column{
+        display: block;
+        margin: 0;
+        margin-top: 3%;
+        }
+        .about_desc{
+            padding-right: 15%;
+            box-sizing: border-box;
+        }
+        .about_desc_right{
+            padding: 0;
+            margin: 0;
+        }
+    
+
+    }//about_desc_wrap
+    
+.desc2_wrap,.lesson_desc_right,.le_desc2_wrap,.le_desc3_wrap,.access_desc2_wrap{
+    
+        .desc2_title,.desc3_title{
+            text-align: left;
+        }
+
+        h3{
+            padding-left: 6%;
+            margin-bottom: 2%;
+        }
+        p{
+            width:400px;
+            margin-left: 50px;
+            margin-bottom: 4%;
+        }
+        
+        .wrap{
+            
+        .click_re{
+            display: block;
+            width: 100px;
+            margin-left: 400px;
+            padding: 10px 40px;
+            border-radius: 10px;
+        }
+    }
+    
+    
+    .le_pt1,.le_pt2,.le_pt3{
+        display: flex;
+        h3{
+            width: 130px;
+            padding: 0;
+        }
+        p{
+            width:600px;
+        }
+  
+    }
+            table{
+            margin-left:170px;
+            tr,td{
+                vertical-align: top;
+                padding:0 10px 5px 0;
+                
+            }
+        }
+        .wrap{
+
+         .click_free{
+        display: block;
+        border-radius: 10px;
+        }
+    }
+    }
+    .le_desc3_wrap{
+        p{width:auto;}
+    }
+    
+
+.profile_desc_wrap{
+
+    .profile_right{
+        margin: 0;
+        border-radius:5%;
+        height: 300px;
+        padding: 8% 15%;
+        h3{
+            .br{
+                display: inline;
+                @include fontsize(24);
+                padding-left: 2%;
+            }
+        }
+    }
+    .wrap{
+        text-align: right;
+
+    }
+}
+    .pt1,.pt2,.pt3{
+        display: flex;
+        h3{
+            padding: 0;
+            margin-left: 20px;
+            width: 300px;
+
+        }
+        p{
+            width: 600px;
+        }
+    }
+
+.access_desc_wrap{
+
+    .access_desc{
+        p{
+            margin-bottom: 98px;
+        }
+    }
+}
+.access_desc2_wrap{
+        margin-top: 5%;
+  p{
+      margin: 0;
+      color: $font;
+  }
+  .gm_area{
+      margin-top:30px;
+  }
+}
+
+    
+}
+
