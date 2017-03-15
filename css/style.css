@@ -99,7 +99,7 @@ ul {
 /* header,nav共通ここまで
 -------------------------------------------- */
 main {
-  padding-top: 63px;
+  padding-top: 20%;
   /*メインビジュアル
   ----------------------------------------------------------- */
   /* 教室紹介部分ここから
@@ -206,6 +206,7 @@ main {
       font-size: 20px;
       font-size: 2rem;
       font-family: "set_hannari", "Hannari", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+      letter-spacing: -0.1rem;
       padding-bottom: 2%; }
       main .info h3 i, main .access h3 i {
         padding-right: 2%; }
@@ -215,6 +216,10 @@ main {
       border-radius: 5px;
       background: #fff;
       padding-bottom: 50px; }
+      main .info .wrap .info_bg .in, main .access .wrap .info_bg .in {
+        display: flex; }
+        main .info .wrap .info_bg .in dt, main .access .wrap .info_bg .in dt {
+          padding-right: 5%; }
       main .info .wrap .more, main .access .wrap .more {
         position: absolute;
         top: 70%;
@@ -388,28 +393,7 @@ footer {
             text-align: center;
             width: 14.3%;
             border-left: solid 1px #b2804c;
-            position: relative;
-            /*     &:hover{
-                         width: 14.3%;
-                         height: 50px;
-                         &:after{
-                             content: " ";
-                             display: block;
-                             width: 26px;
-                             height: 20px;
-                             background: $pink;
-                             border-radius: 100% 80% 100% 80%;
-                             position: absolute;
-                             
-                         }
-                         &:nth-child(even){
-                             &:after{
-                                 background: $yellow;
-                             }
-                         }
-                         
-                 }
-                 */ }
+            position: relative; }
             .header_bg header .pc_nav .pc_nav_in li:last-child {
               border-right: solid 1px #b2804c; }
             .header_bg header .pc_nav .pc_nav_in li:after {
@@ -437,15 +421,7 @@ footer {
                 color: #626262; }
           .header_bg header .pc_nav .pc_nav_in .home::after {
             top: 50%;
-            left: 20%;
-            /*  &:hover{
-                  &::after{
-                      top: 60%;
-                      left: 18%;
-                  
-                  }
-                  
-              } */ }
+            left: 20%; }
             .header_bg header .pc_nav .pc_nav_in .home::after a > span {
               z-index: 99; }
           .header_bg header .pc_nav .pc_nav_in .about:after {
@@ -661,41 +637,41 @@ footer {
 
 /* lesson.html
 -------------------------------------------- */
-.lesson_desc_wrap .title, .access_desc_wrap .title, .profile_desc_wrap .title {
+.lesson_desc_wrap .title, .access_desc_wrap .title, .profile_desc_wrap .title, .piano_desc_wrap .title, .contact_desc_wrap .title {
   display: inline-block; }
-  .lesson_desc_wrap .title h2, .access_desc_wrap .title h2, .profile_desc_wrap .title h2 {
+  .lesson_desc_wrap .title h2, .access_desc_wrap .title h2, .profile_desc_wrap .title h2, .piano_desc_wrap .title h2, .contact_desc_wrap .title h2 {
     font-family: "set_hannari", "Hannari", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
     letter-spacing: -0.1rem; }
-  .lesson_desc_wrap .title .line, .access_desc_wrap .title .line, .profile_desc_wrap .title .line {
+  .lesson_desc_wrap .title .line, .access_desc_wrap .title .line, .profile_desc_wrap .title .line, .piano_desc_wrap .title .line, .contact_desc_wrap .title .line {
     display: block;
     width: 100%;
     border-top: solid 1px #b2804c;
     border-bottom: solid 3px #b2804c;
     padding: 3px 0 0 0;
     margin-bottom: 3%; }
-.lesson_desc_wrap .lesson_desc, .access_desc_wrap .lesson_desc, .profile_desc_wrap .lesson_desc {
+.lesson_desc_wrap .lesson_desc, .access_desc_wrap .lesson_desc, .profile_desc_wrap .lesson_desc, .piano_desc_wrap .lesson_desc, .contact_desc_wrap .lesson_desc {
   background: #fff;
   border-radius: 10px;
   padding: 5%;
   margin-bottom: 5%; }
-  .lesson_desc_wrap .lesson_desc i, .access_desc_wrap .lesson_desc i, .profile_desc_wrap .lesson_desc i {
+  .lesson_desc_wrap .lesson_desc i, .access_desc_wrap .lesson_desc i, .profile_desc_wrap .lesson_desc i, .piano_desc_wrap .lesson_desc i, .contact_desc_wrap .lesson_desc i {
     font-size: 20px;
     font-size: 2rem;
     padding-right: 2%;
     color: #b2804c; }
-  .lesson_desc_wrap .lesson_desc p, .access_desc_wrap .lesson_desc p, .profile_desc_wrap .lesson_desc p {
+  .lesson_desc_wrap .lesson_desc p, .access_desc_wrap .lesson_desc p, .profile_desc_wrap .lesson_desc p, .piano_desc_wrap .lesson_desc p, .contact_desc_wrap .lesson_desc p {
     margin: 5px 0 5px;
     margin-left: 25px; }
-.lesson_desc_wrap .lesson_desc_right, .access_desc_wrap .lesson_desc_right, .profile_desc_wrap .lesson_desc_right {
+.lesson_desc_wrap .lesson_desc_right, .access_desc_wrap .lesson_desc_right, .profile_desc_wrap .lesson_desc_right, .piano_desc_wrap .lesson_desc_right, .contact_desc_wrap .lesson_desc_right {
   padding-top: 2%;
   margin-bottom: 2%; }
-  .lesson_desc_wrap .lesson_desc_right img, .access_desc_wrap .lesson_desc_right img, .profile_desc_wrap .lesson_desc_right img {
+  .lesson_desc_wrap .lesson_desc_right img, .access_desc_wrap .lesson_desc_right img, .profile_desc_wrap .lesson_desc_right img, .piano_desc_wrap .lesson_desc_right img, .contact_desc_wrap .lesson_desc_right img {
     vertical-align: bottom; }
 
 .wrap {
   text-align: center;
   margin-bottom: 5%; }
-  .wrap .click_free, .profile_desc_wrap .wrap .click_play {
+  .wrap .click_free, .profile_desc_wrap .wrap .click_play, .wrap_click .wrap .click_play {
     width: 180px;
     display: inline-block;
     text-align: center;
@@ -750,6 +726,8 @@ footer {
   font-size: 1.4rem;
   color: #b2804c; }
 
+/* access.html
+-------------------------------------------- */
 .access_desc_wrap p {
   margin-top: 2%;
   line-height: 2.0; }
@@ -789,6 +767,59 @@ footer {
   .profile_desc_wrap .wrap .click_play {
     background: #e6dea9; }
 
+/* piano.html
+-------------------------------------------- */
+.piano_desc_wrap .piano_desc {
+  margin-top: 2%; }
+.piano_desc_wrap .piano_desc_right {
+  padding-top: 2%; }
+  .piano_desc_wrap .piano_desc_right img {
+    vertical-align: bottom; }
+
+.pi_desc2_wrap {
+  margin-top: 5%; }
+  .pi_desc2_wrap .pt_wrap {
+    position: relative;
+    background: url("../img/common/piano_bg1.png") no-repeat, url("../img/common/piano_bg2.png") no-repeat, url("../img/common/piano_bg3.png") no-repeat;
+    background-position: 10% 20%, 90% 40%, 90% 90%; }
+    .pi_desc2_wrap .pt_wrap .bg_wrap {
+      background: rgba(255, 255, 255, 0.6);
+      margin-bottom: 5%;
+      border-radius: 10px; }
+    .pi_desc2_wrap .pt_wrap .pi_pt1, .pi_desc2_wrap .pt_wrap .pi_pt2, .pi_desc2_wrap .pt_wrap .pi_pt3, .pi_desc2_wrap .pt_wrap .pi_pt4, .pi_desc2_wrap .pt_wrap .pi_pt5 {
+      padding: 5%; }
+      .pi_desc2_wrap .pt_wrap .pi_pt1 h3, .pi_desc2_wrap .pt_wrap .pi_pt2 h3, .pi_desc2_wrap .pt_wrap .pi_pt3 h3, .pi_desc2_wrap .pt_wrap .pi_pt4 h3, .pi_desc2_wrap .pt_wrap .pi_pt5 h3 {
+        font-size: 18px;
+        font-size: 1.8rem; }
+        .pi_desc2_wrap .pt_wrap .pi_pt1 h3 i, .pi_desc2_wrap .pt_wrap .pi_pt2 h3 i, .pi_desc2_wrap .pt_wrap .pi_pt3 h3 i, .pi_desc2_wrap .pt_wrap .pi_pt4 h3 i, .pi_desc2_wrap .pt_wrap .pi_pt5 h3 i {
+          color: #14c0c9;
+          padding-right: 5px; }
+      .pi_desc2_wrap .pt_wrap .pi_pt1 p, .pi_desc2_wrap .pt_wrap .pi_pt2 p, .pi_desc2_wrap .pt_wrap .pi_pt3 p, .pi_desc2_wrap .pt_wrap .pi_pt4 p, .pi_desc2_wrap .pt_wrap .pi_pt5 p {
+        color: #b2804c; }
+
+.wrap_click .wrap {
+  margin-top: 5%; }
+  .wrap_click .wrap .click_play {
+    background: #e6dea9; }
+
+/* contact.html
+-------------------------------------------- */
+.contact_desc_wrap .contact_desc p {
+  width: 100%;
+  margin-top: 5%; }
+.contact_desc_wrap form {
+  margin-top: 5%; }
+  .contact_desc_wrap form .box_left dl dt {
+    width: 120px; }
+  .contact_desc_wrap form .box_left .input {
+    width: 200px; }
+  .contact_desc_wrap form .box_right textarea {
+    width: 300px;
+    height: 200px; }
+  .contact_desc_wrap form .box_right .btn_box .btn_confirm {
+    background: #ffcac9;
+    border: none; }
+
 /* (PC:900px)
 -------------------------------------------- */
 @media (min-width: 900px) {
@@ -800,47 +831,47 @@ footer {
     background-position: 0 -500px;
     width: 100%; }
 
-  .about_desc_wrap, .lesson_desc_wrap, .access_desc_wrap, .profile_desc_wrap, .access_desc_wrap {
+  .about_desc_wrap, .lesson_desc_wrap, .access_desc_wrap, .profile_desc_wrap, .piano_desc_wrap, .contact_desc_wrap, .access_desc_wrap {
     margin-top: 2%; }
-    .about_desc_wrap .column, .lesson_desc_wrap .column, .access_desc_wrap .column, .profile_desc_wrap .column, .access_desc_wrap .column {
+    .about_desc_wrap .column, .lesson_desc_wrap .column, .access_desc_wrap .column, .profile_desc_wrap .column, .piano_desc_wrap .column, .contact_desc_wrap .column, .access_desc_wrap .column {
       display: block;
       margin: 0;
       margin-top: 3%; }
-    .about_desc_wrap .about_desc, .lesson_desc_wrap .about_desc, .access_desc_wrap .about_desc, .profile_desc_wrap .about_desc, .access_desc_wrap .about_desc {
+    .about_desc_wrap .about_desc, .lesson_desc_wrap .about_desc, .access_desc_wrap .about_desc, .profile_desc_wrap .about_desc, .piano_desc_wrap .about_desc, .contact_desc_wrap .about_desc, .access_desc_wrap .about_desc {
       padding-right: 15%;
       box-sizing: border-box; }
-    .about_desc_wrap .about_desc_right, .lesson_desc_wrap .about_desc_right, .access_desc_wrap .about_desc_right, .profile_desc_wrap .about_desc_right, .access_desc_wrap .about_desc_right {
+    .about_desc_wrap .about_desc_right, .lesson_desc_wrap .about_desc_right, .access_desc_wrap .about_desc_right, .profile_desc_wrap .about_desc_right, .piano_desc_wrap .about_desc_right, .contact_desc_wrap .about_desc_right, .access_desc_wrap .about_desc_right {
       padding: 0;
       margin: 0; }
 
-  .desc2_wrap .desc2_title, .desc2_wrap .desc3_title, .lesson_desc_right .desc2_title, .lesson_desc_right .desc3_title, .le_desc2_wrap .desc2_title, .le_desc2_wrap .desc3_title, .le_desc3_wrap .desc2_title, .le_desc3_wrap .desc3_title, .access_desc2_wrap .desc2_title, .access_desc2_wrap .desc3_title {
+  .desc2_wrap .desc2_title, .desc2_wrap .desc3_title, .lesson_desc_right .desc2_title, .lesson_desc_right .desc3_title, .le_desc2_wrap .desc2_title, .le_desc2_wrap .desc3_title, .le_desc3_wrap .desc2_title, .le_desc3_wrap .desc3_title, .access_desc2_wrap .desc2_title, .access_desc2_wrap .desc3_title, .pi_desc2_wrap .desc2_title, .pi_desc2_wrap .desc3_title {
     text-align: left; }
-  .desc2_wrap h3, .lesson_desc_right h3, .le_desc2_wrap h3, .le_desc3_wrap h3, .access_desc2_wrap h3 {
+  .desc2_wrap h3, .lesson_desc_right h3, .le_desc2_wrap h3, .le_desc3_wrap h3, .access_desc2_wrap h3, .pi_desc2_wrap h3 {
     padding-left: 6%;
     margin-bottom: 2%; }
-  .desc2_wrap p, .lesson_desc_right p, .le_desc2_wrap p, .le_desc3_wrap p, .access_desc2_wrap p {
+  .desc2_wrap p, .lesson_desc_right p, .le_desc2_wrap p, .le_desc3_wrap p, .access_desc2_wrap p, .pi_desc2_wrap p {
     width: 400px;
     margin-left: 50px;
     margin-bottom: 4%; }
-  .desc2_wrap .wrap .click_re, .lesson_desc_right .wrap .click_re, .le_desc2_wrap .wrap .click_re, .le_desc3_wrap .wrap .click_re, .access_desc2_wrap .wrap .click_re {
+  .desc2_wrap .wrap .click_re, .lesson_desc_right .wrap .click_re, .le_desc2_wrap .wrap .click_re, .le_desc3_wrap .wrap .click_re, .access_desc2_wrap .wrap .click_re, .pi_desc2_wrap .wrap .click_re {
     display: block;
     width: 100px;
     margin-left: 400px;
     padding: 10px 40px;
     border-radius: 10px; }
-  .desc2_wrap .le_pt1, .desc2_wrap .le_pt2, .desc2_wrap .le_pt3, .lesson_desc_right .le_pt1, .lesson_desc_right .le_pt2, .lesson_desc_right .le_pt3, .le_desc2_wrap .le_pt1, .le_desc2_wrap .le_pt2, .le_desc2_wrap .le_pt3, .le_desc3_wrap .le_pt1, .le_desc3_wrap .le_pt2, .le_desc3_wrap .le_pt3, .access_desc2_wrap .le_pt1, .access_desc2_wrap .le_pt2, .access_desc2_wrap .le_pt3 {
+  .desc2_wrap .le_pt1, .desc2_wrap .le_pt2, .desc2_wrap .le_pt3, .lesson_desc_right .le_pt1, .lesson_desc_right .le_pt2, .lesson_desc_right .le_pt3, .le_desc2_wrap .le_pt1, .le_desc2_wrap .le_pt2, .le_desc2_wrap .le_pt3, .le_desc3_wrap .le_pt1, .le_desc3_wrap .le_pt2, .le_desc3_wrap .le_pt3, .access_desc2_wrap .le_pt1, .access_desc2_wrap .le_pt2, .access_desc2_wrap .le_pt3, .pi_desc2_wrap .le_pt1, .pi_desc2_wrap .le_pt2, .pi_desc2_wrap .le_pt3 {
     display: flex; }
-    .desc2_wrap .le_pt1 h3, .desc2_wrap .le_pt2 h3, .desc2_wrap .le_pt3 h3, .lesson_desc_right .le_pt1 h3, .lesson_desc_right .le_pt2 h3, .lesson_desc_right .le_pt3 h3, .le_desc2_wrap .le_pt1 h3, .le_desc2_wrap .le_pt2 h3, .le_desc2_wrap .le_pt3 h3, .le_desc3_wrap .le_pt1 h3, .le_desc3_wrap .le_pt2 h3, .le_desc3_wrap .le_pt3 h3, .access_desc2_wrap .le_pt1 h3, .access_desc2_wrap .le_pt2 h3, .access_desc2_wrap .le_pt3 h3 {
+    .desc2_wrap .le_pt1 h3, .desc2_wrap .le_pt2 h3, .desc2_wrap .le_pt3 h3, .lesson_desc_right .le_pt1 h3, .lesson_desc_right .le_pt2 h3, .lesson_desc_right .le_pt3 h3, .le_desc2_wrap .le_pt1 h3, .le_desc2_wrap .le_pt2 h3, .le_desc2_wrap .le_pt3 h3, .le_desc3_wrap .le_pt1 h3, .le_desc3_wrap .le_pt2 h3, .le_desc3_wrap .le_pt3 h3, .access_desc2_wrap .le_pt1 h3, .access_desc2_wrap .le_pt2 h3, .access_desc2_wrap .le_pt3 h3, .pi_desc2_wrap .le_pt1 h3, .pi_desc2_wrap .le_pt2 h3, .pi_desc2_wrap .le_pt3 h3 {
       width: 130px;
       padding: 0; }
-    .desc2_wrap .le_pt1 p, .desc2_wrap .le_pt2 p, .desc2_wrap .le_pt3 p, .lesson_desc_right .le_pt1 p, .lesson_desc_right .le_pt2 p, .lesson_desc_right .le_pt3 p, .le_desc2_wrap .le_pt1 p, .le_desc2_wrap .le_pt2 p, .le_desc2_wrap .le_pt3 p, .le_desc3_wrap .le_pt1 p, .le_desc3_wrap .le_pt2 p, .le_desc3_wrap .le_pt3 p, .access_desc2_wrap .le_pt1 p, .access_desc2_wrap .le_pt2 p, .access_desc2_wrap .le_pt3 p {
+    .desc2_wrap .le_pt1 p, .desc2_wrap .le_pt2 p, .desc2_wrap .le_pt3 p, .lesson_desc_right .le_pt1 p, .lesson_desc_right .le_pt2 p, .lesson_desc_right .le_pt3 p, .le_desc2_wrap .le_pt1 p, .le_desc2_wrap .le_pt2 p, .le_desc2_wrap .le_pt3 p, .le_desc3_wrap .le_pt1 p, .le_desc3_wrap .le_pt2 p, .le_desc3_wrap .le_pt3 p, .access_desc2_wrap .le_pt1 p, .access_desc2_wrap .le_pt2 p, .access_desc2_wrap .le_pt3 p, .pi_desc2_wrap .le_pt1 p, .pi_desc2_wrap .le_pt2 p, .pi_desc2_wrap .le_pt3 p {
       width: 600px; }
-  .desc2_wrap table, .lesson_desc_right table, .le_desc2_wrap table, .le_desc3_wrap table, .access_desc2_wrap table {
+  .desc2_wrap table, .lesson_desc_right table, .le_desc2_wrap table, .le_desc3_wrap table, .access_desc2_wrap table, .pi_desc2_wrap table {
     margin-left: 170px; }
-    .desc2_wrap table tr, .desc2_wrap table td, .lesson_desc_right table tr, .lesson_desc_right table td, .le_desc2_wrap table tr, .le_desc2_wrap table td, .le_desc3_wrap table tr, .le_desc3_wrap table td, .access_desc2_wrap table tr, .access_desc2_wrap table td {
+    .desc2_wrap table tr, .desc2_wrap table td, .lesson_desc_right table tr, .lesson_desc_right table td, .le_desc2_wrap table tr, .le_desc2_wrap table td, .le_desc3_wrap table tr, .le_desc3_wrap table td, .access_desc2_wrap table tr, .access_desc2_wrap table td, .pi_desc2_wrap table tr, .pi_desc2_wrap table td {
       vertical-align: top;
       padding: 0 10px 5px 0; }
-  .desc2_wrap .wrap .click_free, .desc2_wrap .profile_desc_wrap .wrap .click_play, .profile_desc_wrap .desc2_wrap .wrap .click_play, .lesson_desc_right .wrap .click_free, .lesson_desc_right .profile_desc_wrap .wrap .click_play, .profile_desc_wrap .lesson_desc_right .wrap .click_play, .le_desc2_wrap .wrap .click_free, .le_desc2_wrap .profile_desc_wrap .wrap .click_play, .profile_desc_wrap .le_desc2_wrap .wrap .click_play, .le_desc3_wrap .wrap .click_free, .le_desc3_wrap .profile_desc_wrap .wrap .click_play, .profile_desc_wrap .le_desc3_wrap .wrap .click_play, .access_desc2_wrap .wrap .click_free, .access_desc2_wrap .profile_desc_wrap .wrap .click_play, .profile_desc_wrap .access_desc2_wrap .wrap .click_play {
+  .desc2_wrap .wrap .click_free, .desc2_wrap .profile_desc_wrap .wrap .click_play, .profile_desc_wrap .desc2_wrap .wrap .click_play, .desc2_wrap .wrap_click .wrap .click_play, .wrap_click .desc2_wrap .wrap .click_play, .lesson_desc_right .wrap .click_free, .lesson_desc_right .profile_desc_wrap .wrap .click_play, .profile_desc_wrap .lesson_desc_right .wrap .click_play, .lesson_desc_right .wrap_click .wrap .click_play, .wrap_click .lesson_desc_right .wrap .click_play, .le_desc2_wrap .wrap .click_free, .le_desc2_wrap .profile_desc_wrap .wrap .click_play, .profile_desc_wrap .le_desc2_wrap .wrap .click_play, .le_desc2_wrap .wrap_click .wrap .click_play, .wrap_click .le_desc2_wrap .wrap .click_play, .le_desc3_wrap .wrap .click_free, .le_desc3_wrap .profile_desc_wrap .wrap .click_play, .profile_desc_wrap .le_desc3_wrap .wrap .click_play, .le_desc3_wrap .wrap_click .wrap .click_play, .wrap_click .le_desc3_wrap .wrap .click_play, .access_desc2_wrap .wrap .click_free, .access_desc2_wrap .profile_desc_wrap .wrap .click_play, .profile_desc_wrap .access_desc2_wrap .wrap .click_play, .access_desc2_wrap .wrap_click .wrap .click_play, .wrap_click .access_desc2_wrap .wrap .click_play, .pi_desc2_wrap .wrap .click_free, .pi_desc2_wrap .profile_desc_wrap .wrap .click_play, .profile_desc_wrap .pi_desc2_wrap .wrap .click_play, .pi_desc2_wrap .wrap_click .wrap .click_play, .wrap_click .pi_desc2_wrap .wrap .click_play {
     display: block;
     border-radius: 10px; }
 
@@ -850,7 +881,6 @@ footer {
   .profile_desc_wrap .profile_right {
     margin: 0;
     border-radius: 5%;
-    height: 300px;
     padding: 8% 15%; }
     .profile_desc_wrap .profile_right h3 .br {
       display: inline;
@@ -860,24 +890,123 @@ footer {
   .profile_desc_wrap .wrap {
     text-align: right; }
 
-  .pt1, .pt2, .pt3 {
-    display: flex; }
-    .pt1 h3, .pt2 h3, .pt3 h3 {
-      padding: 0;
-      margin-left: 20px;
-      width: 300px; }
-    .pt1 p, .pt2 p, .pt3 p {
-      width: 600px; }
+  .pt1 h3, .pt2 h3, .pt3 h3 {
+    padding: 0;
+    margin-left: 6%;
+    width: 300px; }
+  .pt1 p, .pt2 p, .pt3 p {
+    width: 600px; }
 
+  /* access.html
+  -------------------------------------------- */
   .access_desc_wrap .access_desc p {
     margin-bottom: 98px; }
 
   .access_desc2_wrap {
     margin-top: 5%; }
+    .access_desc2_wrap .desc2_title {
+      font-size: 20px;
+      font-size: 2rem;
+      margin-bottom: 2%; }
     .access_desc2_wrap p {
       margin: 0;
       color: #b2804c; }
     .access_desc2_wrap .gm_area {
-      margin-top: 30px; } }
+      margin-top: 30px; }
+
+  .pi_desc2_wrap_all {
+    position: relative;
+    height: 1500px;
+    width: 100%;
+    top: -200px; }
+    .pi_desc2_wrap_all .pi_desc2_wrap {
+      height: 1500px; }
+      .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap {
+        width: 100%;
+        height: 1500px; }
+        .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt1, .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt2, .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt3, .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt4, .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt5 {
+          padding: 5%; }
+          .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt1 h3, .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt2 h3, .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt3 h3, .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt4 h3, .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt5 h3 {
+            font-size: 24px;
+            font-size: 2.4rem;
+            padding: 0; }
+          .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt1 p, .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt2 p, .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt3 p, .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt4 p, .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .pi_pt5 p {
+            margin: 0; }
+        .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .left1 {
+          position: absolute;
+          top: 0;
+          width: 50%; }
+        .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .right1 {
+          position: absolute;
+          top: 283px;
+          left: 500px;
+          width: 50%; }
+        .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .left2 {
+          position: absolute;
+          top: 566px;
+          width: 50%; }
+        .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .right2 {
+          position: absolute;
+          top: 849px;
+          left: 500px;
+          width: 50%; }
+        .pi_desc2_wrap_all .pi_desc2_wrap .pt_wrap .left3 {
+          position: absolute;
+          top: 1132px;
+          width: 50%; }
+
+  .row_wrap {
+    position: relative;
+    top: -200px; }
+    .row_wrap .wrap_click {
+      height: auto;
+      display: flex;
+      justify-content: flex-end; }
+      .row_wrap .wrap_click .wrap {
+        position: relative;
+        display: block;
+        margin: 0 0 0 20px; }
+        .row_wrap .wrap_click .wrap .click_play {
+          padding: 5%; }
+      .row_wrap .wrap_click::after {
+        position: absolute;
+        background: url("../img/common/piano_bg4.png") no-repeat;
+        content: "";
+        width: 501px;
+        height: 142px;
+        top: 130px;
+        right: 25%; }
+
+  /* contact.html
+  -------------------------------------------- */
+  .contact_desc_wrap .column {
+    margin-top: 0; }
+    .contact_desc_wrap .column .contact_desc {
+      width: 420px; }
+  .contact_desc_wrap form {
+    margin-top: 5%;
+    width: 100%;
+    display: flex; }
+    .contact_desc_wrap form .box_left {
+      padding-right: 10%; }
+      .contact_desc_wrap form .box_left dl {
+        display: flex; }
+        .contact_desc_wrap form .box_left dl dt {
+          width: 120px;
+          text-align: right;
+          padding-right: 5px;
+          box-sizing: border-box; }
+      .contact_desc_wrap form .box_left .input {
+        width: 220px; }
+    .contact_desc_wrap form .box_right {
+      display: block; }
+      .contact_desc_wrap form .box_right textarea {
+        width: 400px;
+        height: 92%; }
+      .contact_desc_wrap form .box_right .btn_box {
+        text-align: right; }
+        .contact_desc_wrap form .box_right .btn_box .btn_confirm {
+          background: #ffcac9;
+          border: none; } }
 
 /*# sourceMappingURL=style.css.map */
