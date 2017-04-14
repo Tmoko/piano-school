@@ -91,7 +91,9 @@ ul {
     font-family: "set_hannari", "Hannari", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
     letter-spacing: -0.1rem; }
     .sp_nav_wrap .sp_nav li a {
-      padding-right: 3%;
+      text-align: right;
+      display: block;
+      padding: 2% 3% 2% 3%;
       color: #626262; }
       .sp_nav_wrap .sp_nav li a:hover {
         opacity: 0.6; }
@@ -282,7 +284,8 @@ main {
       main .side .bn .blog {
         background: #e8c56e; }
   main .back_wrap {
-    text-align: center; }
+    text-align: center;
+    clear: both; }
     main .back_wrap .toTop {
       display: inline-block;
       padding: 10px;

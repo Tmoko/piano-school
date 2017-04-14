@@ -145,11 +145,14 @@ header{
         background: rgba(255,255,255,0.8);
         z-index: 1;
         li{
+            
             border-bottom: solid 1px #eee;
             font-weight: bold;
             @include fontset;
             a{
-                padding-right: 3%;
+                text-align: right;
+                display: block;
+                padding: 2% 3% 2% 3%;
                 color: #626262;
                 &:hover{
                     opacity: 0.6;
@@ -457,6 +460,7 @@ main{
 ---------------------------------------------- */
 .back_wrap{
     text-align: center;
+    clear: both;
 
         .toTop{
             display: inline-block;
@@ -1571,6 +1575,7 @@ footer{
          margin-top: 5%;
          width:100%;
          display: flex;
+         
         
          
          
@@ -1607,5 +1612,5 @@ footer{
          
      }
 }
-    
+
 }
